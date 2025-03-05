@@ -1,0 +1,422 @@
+- model: puzzles.Round
+  pk: 1
+  fields:
+    order: 1
+    name: "Chapter 1: The Museum of Superb Relics"
+    slug: the-museum-of-superb-relics
+    meta: 11
+- model: puzzles.Round
+  pk: 2
+  fields:
+    order: 2
+    name: "Chapter 2: The Lost Temple"
+    slug: the-lost-temple
+    meta: 22
+- model: puzzles.Round
+  pk: 3
+  fields:
+    order: 3
+    name: "Chapter 3: The Hack"
+    slug: the-hack
+    meta: 33
+- model: puzzles.Round
+  pk: 4
+  fields:
+    order: 4
+    name: "The Blueprint"
+    slug: the-blueprint
+    meta: 35
+
+- model: puzzles.Puzzle
+  pk: 1
+  fields:
+    order: 1
+    name: Tickets Please
+    slug: tickets-please
+    body_template: tickets-please.html
+    answer: BANK TRANSFER
+    round: 1
+    unlock_global: -1
+    unlock_local: 0
+- model: puzzles.Puzzle
+  pk: 2
+  fields:
+    order: 2
+    name: Reading the Room
+    slug: reading-the-room
+    body_template: reading-the-room.html
+    answer: BARBIE DOLL
+    round: 1
+    unlock_global: -1
+    unlock_local: 0
+- model: puzzles.Puzzle
+  pk: 3
+  fields:
+    order: 3
+    name: A Sour Experience
+    slug: a-sour-experience
+    body_template: a-sour-experience.html
+    answer: CASUAL FRIDAY
+    round: 1
+    unlock_global: -1
+    unlock_local: 0
+- model: puzzles.Puzzle
+  pk: 4
+  fields:
+    order: 4
+    name: Meet the Museum Staff
+    slug: meet-the-museum-staff
+    body_template: meet-the-museum-staff.html
+    answer: ROAD BLOCK
+    round: 1
+    unlock_global: -1
+    unlock_local: 0
+- model: puzzles.Puzzle
+  pk: 5
+  fields:
+    order: 5
+    name: Pinching Pig-Pennies
+    slug: pinching-pig-pennies
+    body_template: pinching-pig-pennies.html
+    answer: JELLO DESSERT
+    round: 1
+    unlock_global: -1
+    unlock_local: 1
+- model: puzzles.Puzzle
+  pk: 6
+  fields:
+    order: 6
+    name: Have Your Say
+    slug: have-your-say
+    body_template: have-your-say.html
+    answer: UNDER PRESSURE
+    round: 1
+    unlock_global: -1
+    unlock_local: 2
+- model: puzzles.Puzzle
+  pk: 7
+  fields:
+    order: 7
+    name: In the Jungle
+    slug: in-the-jungle
+    body_template: in-the-jungle.html
+    answer: RANT AND RAVE
+    round: 1
+    unlock_global: -1
+    unlock_local: 3
+- model: puzzles.Puzzle
+  pk: 8
+  fields:
+    order: 8
+    name: Reconnaissance
+    slug: reconnaissance
+    body_template: reconnaissance.html
+    answer: THIS MEANS WAR
+    round: 1
+    unlock_global: -1
+    unlock_local: 4
+- model: puzzles.Puzzle
+  pk: 9
+  fields:
+    order: 9
+    name: Choosy Collectors
+    slug: choosy-collectors
+    body_template: choosy-collectors.html
+    answer: WOULD YOU RATHER
+    round: 1
+    unlock_global: -1
+    unlock_local: 5
+- model: puzzles.Puzzle
+  pk: 10
+  fields:
+    order: 10
+    name: Crossword Puzzle No. 1 in Black and White
+    slug: crossword-puzzle-no-1-in-black-and-white
+    body_template: crossword-puzzle-no-1-in-black-and-white.html
+    answer: COME AND GO
+    round: 1
+    unlock_global: -1
+    unlock_local: 6
+- model: puzzles.Puzzle
+  pk: 11
+  fields:
+    order: 11 
+    name: Under Pollock And Key
+    slug: under-pollock-and-key
+    body_template: under-pollock-and-key.html
+    answer: WORK HARD FOR THE MONET
+    is_meta: True
+    round: 1
+    unlock_global: -1
+    unlock_local: 7
+
+- model: puzzles.Puzzle
+  pk: 12
+  fields:
+    order: 1
+    name: Snakes... Why did it have to be snakes?
+    slug: snakes-why-did-it-have-to-be-snakes
+    body_template: snakes-why-did-it-have-to-be-snakes.html
+    answer: FER-DE-LANCE
+    round: 2
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 13
+  fields:
+    order: 2
+    name: Burial Flags
+    slug: burial-flags
+    body_template: burial-flags.html
+    answer: DEATH WARDS
+    round: 2
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 14
+  fields:
+    order: 3
+    name: Sound and Movement
+    slug: sound-and-movement
+    body_template: sound-and-movement.html
+    answer: DANCERS ALL
+    round: 2
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 15
+  fields:
+    order: 4
+    name: Meandering Streams
+    slug: meandering-streams
+    body_template: meandering-streams.html
+    answer: RIVER WATER
+    round: 2
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 16
+  fields:
+    order: 5
+    name: Fearsome Foes
+    slug: fearsome-foes
+    body_template: fearsome-foes.html
+    answer: EXPEDITION
+    round: 2
+    unlock_global: -1
+    unlock_local: 1
+- model: puzzles.Puzzle
+  pk: 17
+  fields:
+    order: 6
+    name: Blocks
+    slug: blocks
+    body_template: blocks.html
+    answer: ALTAR STONE
+    round: 2
+    unlock_global: -1
+    unlock_local: 2
+- model: puzzles.Puzzle
+  pk: 18
+  fields:
+    order: 7
+    name: The River
+    slug: the-river
+    body_template: the-river.html
+    answer: CROCODILES
+    round: 2
+    unlock_global: -1
+    unlock_local: 3
+- model: puzzles.Puzzle
+  pk: 19
+  fields:
+    order: 8
+    name: Sun, Moon and Stars
+    slug: sun-moon-and-stars
+    body_template: sun-moon-and-stars.html
+    answer: SUN WORSHIP
+    round: 2
+    unlock_global: -1
+    unlock_local: 4
+- model: puzzles.Puzzle
+  pk: 20
+  fields:
+    order: 9
+    name: Star Chart
+    slug: star-chart
+    body_template: star-chart.html
+    answer: ASTRONOMIC
+    round: 2
+    unlock_global: -1
+    unlock_local: 5
+- model: puzzles.Puzzle
+  pk: 21
+  fields:
+    order: 10
+    name: The Curious Cave
+    slug: the-curious-cave
+    body_template: the-curious-cave.html
+    answer: FLINT KNIFE
+    round: 2
+    unlock_global: -1
+    unlock_local: 6
+- model: puzzles.Puzzle
+  pk: 22
+  fields:
+    order: 11
+    name: Rolling Boulders
+    slug: rolling-boulders
+    body_template: rolling-boulders.html
+    answer: THROW A TEMPLE TANTRUM
+    is_meta: True
+    round: 2
+    unlock_global: -1
+    unlock_local: 7
+
+- model: puzzles.Puzzle
+  pk: 23
+  fields:
+    order: 1
+    name: Help Me, ChatOMG!
+    slug: help-me-chatomg
+    body_template: help-me-chatomg.html
+    answer: TERM
+    round: 3
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 24
+  fields:
+    order: 2
+    name: Take The Initiative
+    slug: take-the-initiative
+    body_template: take-the-initiative.html
+    answer: PARTY
+    round: 3
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 25
+  fields:
+    order: 3
+    name: Missed Connections
+    slug: missed-connections
+    body_template: missed-connections.html
+    answer: MY BELOVED
+    round: 3
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 26
+  fields:
+    order: 4
+    name: Crack Team
+    slug: crack-team
+    body_template: crack-team.html
+    answer: RIPPER
+    round: 3
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 27
+  fields:
+    order: 5
+    name: Let's Just Get Takeout
+    slug: lets-just-get-takeout
+    body_template: lets-just-get-takeout.html
+    answer: JOB
+    round: 3
+    unlock_global: -1
+    unlock_local: 1
+- model: puzzles.Puzzle
+  pk: 28
+  fields:
+    order: 6
+    name: FirewallStreetBets
+    slug: firewallstreetbets
+    body_template: firewallstreetbets.html
+    answer: DOUBLE
+    round: 3
+    unlock_global: -1
+    unlock_local: 2
+- model: puzzles.Puzzle
+  pk: 29
+  fields:
+    order: 7
+    name: Weather Conditions
+    slug: weather-conditions
+    body_template: weather-conditions.html
+    answer: DULL
+    round: 3
+    unlock_global: -1
+    unlock_local: 3
+- model: puzzles.Puzzle
+  pk: 30
+  fields:
+    order: 8
+    name: Keeping up with the Keychain
+    slug: keeping-up-with-the-keychain
+    body_template: keeping-up-with-the-keychain.html
+    answer: NEXUS
+    round: 3
+    unlock_global: -1
+    unlock_local: 4
+- model: puzzles.Puzzle
+  pk: 31
+  fields:
+    order: 9
+    name: Face the Music
+    slug: face-the-music
+    body_template: face-the-music.html
+    answer: JEWEL
+    round: 3
+    unlock_global: -1
+    unlock_local: 5
+- model: puzzles.Puzzle
+  pk: 32
+  fields:
+    order: 10
+    name: The Marvelous MsMonster
+    slug: the-marvelous-ms-monster
+    body_template: the-marvelous-ms-monster.html
+    answer: VOYAGERS
+    round: 3
+    unlock_global: -1
+    unlock_local: 6
+- model: puzzles.Puzzle
+  pk: 33
+  fields:
+    order: 11
+    name: The Lantern Digital
+    slug: the-lantern-digital
+    body_template: the-lantern-digital.html
+    answer: TWIDDLE YOUR THUMB DRIVE
+    is_meta: True
+    round: 3
+    unlock_global: -1
+    unlock_local: 8
+
+- model: puzzles.Puzzle
+  pk: 34
+  fields:
+    order: 1
+    name: The Blueprint
+    slug: the-blueprint
+    body_template: the-blueprint.html
+    answer: WITH A MORTAL FRENEMY
+    round: 4
+    unlock_global: -2
+    unlock_local: -1
+- model: puzzles.Puzzle
+  pk: 35
+  fields:
+    order: 2
+    name: The Secret Blueprint
+    slug: the-secret-blueprint
+    body_template: the-secret-blueprint.html
+    answer: REKINDLE AN OLD FLAME
+    is_meta: True
+    round: 4
+    unlock_global: -1
+    unlock_local: 1
+

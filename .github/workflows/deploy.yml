@@ -28,7 +28,7 @@ jobs:
           script: |
             cd /var/www/2025
             git checkout main; git pull
-            python3 manage.py loaddata 2024-puzzles.yaml
-            sudo systemctl restart gph2024
+            python3 manage.py loaddata 2025-puzzles.yaml
+            sudo systemctl restart gph2025
             python3 manage.py collectstatic --noinput
             sudo systemctl restart nginx
