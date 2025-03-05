@@ -19,16 +19,16 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        script: |
-          cd /var/www/2024
-          git checkout main; git pull
-          python3 manage.py loaddata 2024-puzzles.yaml
-          sudo systemctl restart gph2024
-          python3 manage.py collectstatic --noinput
-          sudo systemctl restart nginx
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/2025
+            git checkout main; git pull
+            python3 manage.py loaddata 2024-puzzles.yaml
+            sudo systemctl restart gph2024
+            python3 manage.py collectstatic --noinput
+            sudo systemctl restart nginx
