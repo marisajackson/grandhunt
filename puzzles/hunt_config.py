@@ -4,7 +4,7 @@ from django.utils import timezone
 
 # included in various templates. NOTE, sometimes appears with a "the" before
 # it, maybe check those are what you want.
-HUNT_TITLE = 'Grand Hunt 2024'
+HUNT_TITLE = 'Grand Hunt 2025'
 # included in various templates and displayed on the static site
 HUNT_ORGANIZERS = 'The Agency'
 # included in various templates and set as reply-to for automatic emails
@@ -28,23 +28,23 @@ INITIAL_STATS_AVAILABLE = False
 SURVEYS_AVAILABLE = True
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
-    year=2024,
-    month=8,
+    year=2025,
+    month=1,
     day=9,
     hour=15,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
-    year=2024,
-    month=8,
-    day=18,
+    year=2025,
+    month=1,
+    day=20,
     hour=15,
     minute=0,
 ))
 HUNT_CLOSE_TIME = timezone.make_aware(datetime.datetime(
-    year=2024,
-    month=9,
-    day=18,
+    year=2025,
+    month=1,
+    day=20,
     hour=15,
     minute=0,
 ))
