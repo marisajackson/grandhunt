@@ -73,7 +73,7 @@ urlpatterns = [
     path('teams/unhidden', views.teams_unhidden, name='teams-unhidden'),
     path('edit-team', views.edit_team, name='edit-team'),
 
-    path('the-grand-heist', views.main_map, name='the-grand-heist'),
+    path('the-grand-front', views.main_map, name='the-grand-front'),
     path('puzzles', views.puzzles, name='puzzles'),
     path('round/<slug:slug>', views.round, name='round'),
     path('puzzle/<slug:slug>', views.puzzle, name='puzzle'),

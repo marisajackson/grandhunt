@@ -3,7 +3,7 @@
   fields:
     name: 'Chapter 1: The Front'
     slug: the-front
-    meta: null
+    meta: 44
     order: 1
 - model: puzzles.round
   pk: 2
@@ -17,14 +17,14 @@
   fields:
     name: 'Chapter 3: The Family'
     slug: the-family
-    meta: 33
+    meta: null
     order: 3
 - model: puzzles.round
   pk: 4
   fields:
     name: The Finale
     slug: the-finale
-    meta: 35
+    meta: null
     order: 5
 - model: puzzles.round
   pk: 5
@@ -37,8 +37,8 @@
   pk: 1
   fields:
     name: Beasts on a Leash
-    slug: beasts-on-a-leash
-    body_template: beasts-on-a-leash.html
+    slug: beasts
+    body_template: beasts.html
     answer: BANK TRANSFER
     round: 1
     order: 2
@@ -48,53 +48,11 @@
     unlock_local: 0
     emoji: ':question:'
 - model: puzzles.puzzle
-  pk: 33
-  fields:
-    name: The Lantern Digital
-    slug: the-lantern-digital
-    body_template: the-lantern-digital.html
-    answer: TWIDDLE YOUR THUMB DRIVE
-    round: 3
-    order: 11
-    is_meta: true
-    unlock_hours: -1
-    unlock_global: -1
-    unlock_local: 8
-    emoji: ':question:'
-- model: puzzles.puzzle
-  pk: 34
-  fields:
-    name: The Blueprint
-    slug: the-blueprint
-    body_template: the-blueprint.html
-    answer: WITH A MORTAL FRENEMY
-    round: 4
-    order: 1
-    is_meta: false
-    unlock_hours: -1
-    unlock_global: -2
-    unlock_local: -1
-    emoji: ':question:'
-- model: puzzles.puzzle
-  pk: 35
-  fields:
-    name: The Secret Blueprint
-    slug: the-secret-blueprint
-    body_template: the-secret-blueprint.html
-    answer: REKINDLE AN OLD FLAME
-    round: 4
-    order: 2
-    is_meta: true
-    unlock_hours: -1
-    unlock_global: -1
-    unlock_local: 1
-    emoji: ':question:'
-- model: puzzles.puzzle
   pk: 36
   fields:
     name: Crowe's Tavern
-    slug: crowes-tavern
-    body_template: crowes-tavern.html
+    slug: crowes
+    body_template: crowes.html
     answer: Lacking
     round: 1
     order: 1
@@ -144,4 +102,74 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 3
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 40
+  fields:
+    name: Growing Grin Orthodontics
+    slug: growing-grin
+    body_template: growing-grin.html
+    answer: EXTRACTION
+    round: 1
+    order: 6
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 4
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 41
+  fields:
+    name: Endpoint Strategists
+    slug: endpoint
+    body_template: endpoint.html
+    answer: TEAL IS NEAT
+    round: 1
+    order: 7
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 5
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 42
+  fields:
+    name: Tea Store of the Future
+    slug: tea-store
+    body_template: tea-store.html
+    answer: RICE BOWL
+    round: 1
+    order: 8
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 6
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 43
+  fields:
+    name: So U Think U Can Dance
+    slug: dance
+    body_template: dance.html
+    answer: SCHOOLMASTER
+    round: 1
+    order: 9
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 7
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 44
+  fields:
+    name: Town Tours
+    slug: town-tours
+    body_template: town-tours.html
+    answer: XXX
+    round: 1
+    order: 10
+    is_meta: true
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 8
     emoji: ':question:'

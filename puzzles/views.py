@@ -508,13 +508,13 @@ def round(request, slug):
             except (TemplateDoesNotExist, IsADirectoryError):
                 # A plausible cause of it being a directory is that the slug
                 # is blank.
-                return redirect('the-grand-heist')
+                return redirect('the-grand-front')
 
                 # Instead will fall back to the main map
                 # return redirect('puzzles')
     # removed the invalid round name check and instead will fall back to the main map
     messages.error(request, _('Invalid round name.'))
-    return redirect('the-grand-heist')
+    return redirect('the-grand-front')
 
 
 def render_puzzles(request):
@@ -699,9 +699,9 @@ def solve(request):
                     messages.success(request, mark_safe("You have unlocked <a href='/story#5'>the epilogue</a>!"))
                     messages.success(request, mark_safe("Please take our <a href='https://forms.gle/oAuebqhqczp2bUVCA'>survey</a>!"))
                 elif puzzle.slug == RUNAROUND_SLUG:
-                    messages.success(request, mark_safe("You have found <a href='/the-grand-heist'>the secret blueprint</a>!"))
+                    messages.success(request, mark_safe("You have found <a href='/the-grand-front'>the secret blueprint</a>!"))
                 elif puzzle.is_meta:
-                    messages.success(request, mark_safe("You have unlocked a <a href='/the-grand-heist'>new round</a>!"))
+                    messages.success(request, mark_safe("You have unlocked a <a href='/the-grand-front'>new round</a>!"))
                     messages.success(request, _('A new <a href=''/story#%s''>story element</a> is available!') % str(int(round.order) + 1))
             else:
                 messages.error(request, _('%s is incorrect.') % normalized_answer)

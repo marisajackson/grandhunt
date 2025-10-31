@@ -1,0 +1,29 @@
+{% extends "round.html" %}
+{% load static %}
+{% block html_class %}r1{% endblock %}
+
+{% block round-body %}
+<!-- Containing div, relative pos. allows absolute positioning of icons over base image -->
+<div style="position:relative; width:100%">
+	<!-- Base map image -->
+	<img style="z-index: -10; width: 100%"
+		src="{% static 'map_resources/r1/map.png' %}" />
+
+	<!-- Individual puzzle map icons -->
+	{% for puzzle in round.puzzles %}
+	{% if puzzle.puzzle.slug in round.unlocked_slugs %}
+	<div class="map_item abs-z1 {{ puzzle.puzzle.slug }}">
+		<a href={% url 'puzzle' puzzle.puzzle.slug %}>
+			<!-- TODO it's redundant to have r1 in the file name and be in the r1 dir, fix that in real assets -->
+			<img class="item_img abs-z1" style="width: 100%"
+				src="{% static 'map_resources/r1/'|add:puzzle.puzzle.slug|add:'.png' %}" />
+			{% if puzzle.answer %}
+			<div class="hide abs-z5">{{puzzle.answer}}</div>
+			{% endif %}
+		</a>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+</div>
+{% endblock %}
