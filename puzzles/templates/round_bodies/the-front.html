@@ -4,26 +4,31 @@
 
 {% block round-body %}
 <!-- Containing div, relative pos. allows absolute positioning of icons over base image -->
-<div style="position:relative; width:100%">
-	<!-- Base map image -->
-	<img style="z-index: -10; width: 100%"
-		src="{% static 'map_resources/r1/map.png' %}" />
+<div style="position:relative; width:100%" id="the-front">
+	<div>
+		<!-- Base map image -->
+		<div class="map-container">
+			<img style="z-index: -10; height: 1200px;"
+				src="{% static 'grand_front/map_resources/r1/map.png' %}" />
+		</div>
 
-	<!-- Individual puzzle map icons -->
-	{% for puzzle in round.puzzles %}
-	{% if puzzle.puzzle.slug in round.unlocked_slugs %}
-	<div class="map_item abs-z1 {{ puzzle.puzzle.slug }}">
-		<a href={% url 'puzzle' puzzle.puzzle.slug %}>
-			<!-- TODO it's redundant to have r1 in the file name and be in the r1 dir, fix that in real assets -->
-			<img class="item_img abs-z1" style="width: 100%"
-				src="{% static 'map_resources/r1/'|add:puzzle.puzzle.slug|add:'.png' %}" />
-			{% if puzzle.answer %}
-			<div class="hide abs-z5">{{puzzle.answer}}</div>
+		<div class="map-puzzles-container">
+			<!-- Individual puzzle map icons -->
+			{% for puzzle in round.puzzles %}
+			{% if puzzle.puzzle.slug in round.unlocked_slugs %}
+			<div class="map_item {{ puzzle.puzzle.slug }}">
+				<a href={% url 'puzzle' puzzle.puzzle.slug %}>
+					<img class="item_img"
+						src="{% static 'grand_front/map_resources/r1/'|add:puzzle.puzzle.slug|add:'.png' %}" />
+					{% if puzzle.answer %}
+					<div class="hide abs-z5">{{puzzle.answer}}</div>
+					{% endif %}
+				</a>
+			</div>
 			{% endif %}
-		</a>
+			{% endfor %}
+		</div>
 	</div>
-	{% endif %}
-	{% endfor %}
 
 </div>
 {% endblock %}
