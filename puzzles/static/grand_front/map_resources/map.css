@@ -1,0 +1,58 @@
+#the-front .item_img {
+  width: 280px;
+}
+
+#the-front .map-container {
+  text-align: center;
+  z-index: -10;
+}
+
+#the-front .map-puzzles-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 660px;
+}
+
+/* #the-front .map_item {
+} */
+
+/* .crowes {
+  top: 275px;
+}
+
+.beasts {
+  top: 345px;
+}
+
+.suns-out {
+  top: 410px;
+}
+
+.knowhow {
+  top: 500px;
+}
+
+.unorthodox {
+  top: 600px;
+}
+
+.growing-grin {
+  top: 700px;
+}
+
+.endpoint {
+  top: 785px;
+}
+
+.tea-store {
+  top: 870px;
+}
+
+.dance {
+  top: 955px;
+}
+
+.town-tours {
+  top: 1040px;
+} */
