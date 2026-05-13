@@ -8,25 +8,17 @@
 	<div>
 		<!-- Base map image -->
 		<div class="map-container">
-			<img style="z-index: -10; height: 1200px;"
-				src="{% static 'grand_front/map_resources/r1/map.png' %}" />
-		</div>
-
-		<div class="map-puzzles-container">
-			<!-- Individual puzzle map icons -->
-			{% for puzzle in round.puzzles %}
-			{% if puzzle.puzzle.slug in round.unlocked_slugs %}
-			<div class="map_item {{ puzzle.puzzle.slug }}">
-				<a href={% url 'puzzle' puzzle.puzzle.slug %}>
-					<img class="item_img"
-						src="{% static 'grand_front/map_resources/r1/'|add:puzzle.puzzle.slug|add:'.png' %}" />
-					{% if puzzle.answer %}
-					<div class="hide abs-z5">{{puzzle.answer}}</div>
-					{% endif %}
-				</a>
+			<div class="map-puzzles-container">
+				<!-- Individual puzzle map icons -->
+				{% for puzzle in round.puzzles %}
+				<div class="map_item {{ puzzle.puzzle.slug }}">
+					<a href={% url 'puzzle' puzzle.puzzle.slug %}>
+						<img class="item_img"
+							src="{% static 'grand_front/map_resources/r1/'|add:puzzle.puzzle.slug|add:'.png' %}" />
+					</a>
+				</div>
+				{% endfor %}
 			</div>
-			{% endif %}
-			{% endfor %}
 		</div>
 	</div>
 
