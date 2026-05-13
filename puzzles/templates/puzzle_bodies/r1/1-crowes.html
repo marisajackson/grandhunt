@@ -1,0 +1,27 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block html_class %}r1{% endblock %}
+
+{% block puzzle-body-html %}
+
+<div class="window">
+    <div class="name">Flavor Text</div>
+    <p class="flavortext">You've never been allowed inside Crowe's tavern
+        before.</p>
+    <p class="flavortext">You find yourself drawn into watching an ongoing game
+        of pool. </p>
+</div>
+
+<div class="window">
+    <p>First the purple striped ball is pocketed. Then yellow solid followed by
+        red solid. Striped red, striped yellow, striped green. Solid Maroon...
+    </p>
+    <p>The game could go on all day, but you'd better get moving. It's your
+        first day and you don't want to be found _______</p>
+</div>
+
+<a href="/round/the-front">
+    <div class="endnote"></div>
+</a>
+
+{% endblock %}

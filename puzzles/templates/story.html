@@ -1,21 +1,17 @@
-{% extends "base.html" %}
-{% load i18n %}
-{% load static %}
-
-{% block content %}
+{% extends "base.html" %} {% load i18n %} {% load static %} {% block content %}
 
 <style>
-.letter {
-	background-image: url("{% static 'story_resources/letter.png' %}");
-	background-size: contain;       
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 100%;
+  .letter {
+    background-image: url("{% static 'story_resources/letter.png' %}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
     height: 750px;
     position: relative;
-}
+  }
 
-.letter-text {
+  .letter-text {
     color: black;
     font-family: Apple Chancery, cursive;
     position: absolute;
@@ -23,19 +19,19 @@
     left: 20%;
     right: 20%;
     bottom: 15%;
-}
+  }
 
-.postcard {
-	background-image: url("{% static 'story_resources/postcard.png' %}");
-	background-size: contain;       
-	background-repeat: no-repeat;
-	background-position: center center;
+  .postcard {
+    background-image: url("{% static 'story_resources/postcard.png' %}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 100%;
     height: 700px;
     position: relative;
-}
+  }
 
-.postcard-text {
+  .postcard-text {
     color: black;
     font-family: Bradley Hand, cursive;
     position: absolute;
@@ -45,33 +41,33 @@
     bottom: 15%;
     font-size: 1em;
     line-height: 1.05em;
-}
+  }
 
-.r2 .frame-blue {
+  .r2 .frame-blue {
     padding: 0px;
-}
+  }
 
-.phone {
-	background-image: url("{% static 'story_resources/phone.png' %}");
-	background-size: contain;       
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 100%;
+  .phone {
+    background-image: url("{% static 'story_resources/phone.png' %}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
     height: 900px;
     position: relative;
-}
+  }
 
-.phone-text {
+  .phone-text {
     font-family: monospace;
     position: absolute;
     top: 12%;
     left: 22%;
     right: 20%;
-    bottom: 15%; 
+    bottom: 15%;
     font-size: 0.7em;
-}
+  }
 
-.phone-receive {
+  .phone-receive {
     background: var(--white-color);
     border-radius: 20px;
     border-style: solid;
@@ -81,9 +77,9 @@
     padding: 10px;
     width: 80%;
     margin-bottom: 7px;
-}
+  }
 
-.phone-send {
+  .phone-send {
     background: var(--accent-color);
     border-radius: 20px;
     color: var(--white-color);
@@ -92,180 +88,310 @@
     position: relative;
     right: -55%;
     margin-bottom: 7px;
-}
+  }
 
-.dotdotdot {
+  .dotdotdot {
     top: -50px;
-}
+  }
 
-.rival {
+  .rival {
     margin: auto;
     display: block;
-}
+  }
 
-.avatar {
+  .avatar {
     position: absolute;
     flex: 0 0 40px;
     height: 150px;
     width: 150px;
-}
+  }
 
-.profile-detail {
-    position:absolute;
+  .profile-detail {
+    position: absolute;
     text-align: left;
     color: black;
     margin-left: 160px;
     max-width: 70%;
     font-size: 0.8em;
     font-family: monospace;
-}  
+  }
 
-.profile {
-    position:relative;
+  .profile {
+    position: relative;
     display: flex;
     align-items: left;
     justify-content: start;
     padding: 0px;
     min-height: 350px;
-}
-
+  }
 </style>
 
 <h1>{% translate "Story" %}</h1>
 
 <main>
-
-<div class="no-break story-chunk" id="1"> 
+  <div class="no-break story-chunk" id="1">
     <h4>The Job</h4>
-    <img src="{% static 'story_resources/header-1.png' %}" alt="header" width="100%">
+    <img
+      src="{% static 'story_resources/header-1.png' %}"
+      alt="header"
+      width="100%"
+    />
     <h4>&nbsp;</h4>
     <div class="letter">
-        <div class="letter-text">
-            Hello <span class ="highlight">The Solver</span>,<br /><br />
-            I’m writing to you with a job. Not just any job — <span class ="highlight">The Job.</span><br /><br />
-            A wealthy patron has their eye on a lantern, stored deep in a museum’s vault. They call it <span class ="highlight">The Lantern</span>, and they say it could <i>change their world</i>. They are offering a sum so large to the person that can swipe it — well, I’ll just call it <i>priceless</i>.<br /><br /><br /><br />
-            You are the only one I know capable of pulling off such a feat. So how about it — are you in?<br /><br />
-            — <span class ="highlight">The Fixer</span>
-        </div>
+      <div class="letter-text">
+        Hello <span class="highlight">The Solver</span>,<br /><br />
+        I’m writing to you with a job. Not just any job —
+        <span class="highlight">The Job.</span><br /><br />
+        A wealthy patron has their eye on a lantern, stored deep in a museum’s
+        vault. They call it <span class="highlight">The Lantern</span>, and they
+        say it could <i>change their world</i>. They are offering a sum so large
+        to the person that can swipe it — well, I’ll just call it
+        <i>priceless</i>.<br /><br /><br /><br />
+        You are the only one I know capable of pulling off such a feat. So how
+        about it — are you in?<br /><br />
+        — <span class="highlight">The Fixer</span>
+      </div>
     </div>
-</div>
+  </div>
 
-{% for key, value in story_points.items %}
-
-{% if key == 'round1_open' %}
-<div class="no-break story-chunk">
-    <h5><a href="{% url 'the-grand-heist' %}">Start your heist</a></h5>
-</div>
-{% endif %}
-
-{% if key == 'meta1_done' %}
-<div class="no-break story-chunk" id="2">
+  {% for key, value in story_points.items %} {% if key == 'round1_open' %}
+  <div class="no-break story-chunk">
+    <h5><a href="{% url 'the-grand-front' %}">Start your heist</a></h5>
+  </div>
+  {% endif %} {% if key == 'meta1_done' %}
+  <div class="no-break story-chunk" id="2">
     <h4>The Chase</h4>
-    <img src="{% static 'story_resources/header-2.png' %}" alt="header" width="100%">
+    <img
+      src="{% static 'story_resources/header-2.png' %}"
+      alt="header"
+      width="100%"
+    />
     <h4>&nbsp;</h4>
-    <p>You twist the key, open the door and — nothing. Well, almost nothing, but certainly not <span class ="highlight">The Lantern</span>. Inside is a postcard, and a scrap of what looks to be part of a <em><a href="/puzzle/the-blueprint">blueprint</a></em>.</p> 
-    <p>Someone got to the safe first! Not just anyone, but master thief <span class ="highlight">The Rival</span>. You've clashed with them during high-stakes heists for most of your professional life.</p>
-    <img class="rival" src="{% static 'story_resources/rival.png' %}" alt="The Rival" width="50%">
+    <p>
+      You twist the key, open the door and — nothing. Well, almost nothing, but
+      certainly not <span class="highlight">The Lantern</span>. Inside is a
+      postcard, and a scrap of what looks to be part of a
+      <em><a href="/puzzle/the-blueprint">blueprint</a></em
+      >.
+    </p>
+    <p>
+      Someone got to the safe first! Not just anyone, but master thief
+      <span class="highlight">The Rival</span>. You've clashed with them during
+      high-stakes heists for most of your professional life.
+    </p>
+    <img
+      class="rival"
+      src="{% static 'story_resources/rival.png' %}"
+      alt="The Rival"
+      width="50%"
+    />
     <p>It seems they were one step ahead, but all is not <em>lost</em>.</p>
     <div class="r1">
-        <div class="window">
-            <div class="name">A breadcrumb, on postcard, 2024</div>
-            <div class="postcard">
-                <div class="postcard-text">
-                    <span class ="highlight">The Solver</span>,<br /><br />
-                    I do love when our paths cross. But when you <span class ="highlight" style="font-family:monospace;">WORK HARD FOR THE MONET</span>, it never pays off.<br /><br />
-                    I’m down for a challenge, so I’ll let you in on a secret. <span class ="highlight">The Lantern</span> wasn’t here. Can your big brain guess where I’m exploring next?<br /><br />
-                    Worst wishes,<br />
-                    <span class ="highlight">The Rival</span>
-                </div>
-            </div>
+      <div class="window">
+        <div class="name">A breadcrumb, on postcard, 2024</div>
+        <div class="postcard">
+          <div class="postcard-text">
+            <span class="highlight">The Solver</span>,<br /><br />
+            I do love when our paths cross. But when you
+            <span class="highlight" style="font-family: monospace"
+              >WORK HARD FOR THE MONET</span
+            >, it never pays off.<br /><br />
+            I’m down for a challenge, so I’ll let you in on a secret.
+            <span class="highlight">The Lantern</span> wasn’t here. Can your big
+            brain guess where I’m exploring next?<br /><br />
+            Worst wishes,<br />
+            <span class="highlight">The Rival</span>
+          </div>
         </div>
+      </div>
     </div>
     <p>You don your fedora, dust off your whip, and get cracking!</p>
     <br />
-    <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
-</div>
-{% endif %}
-
-{% if key == 'meta2_done' %}
-<div class="no-break story-chunk" id="3">
+    <h5><a href="{% url 'the-grand-front' %}">Continue your heist</a></h5>
+  </div>
+  {% endif %} {% if key == 'meta2_done' %}
+  <div class="no-break story-chunk" id="3">
     <h4>The Escape</h4>
-    <img src="{% static 'story_resources/header-3.png' %}" alt="header" width="100%">
+    <img
+      src="{% static 'story_resources/header-3.png' %}"
+      alt="header"
+      width="100%"
+    />
     <h4>&nbsp;</h4>
-    <p>You dive headfirst through the temple entrance, right as the boulder crashes behind you. Unfortunately, you couldn't rescue your fedora in time — RIP. But you notice another piece of a <em><a href="/puzzle/the-blueprint">blueprint</a></em> wedged between the stone tiles.</p> 
-    <p><span class ="highlight">The Rival</span> is nowhere to be seen. And <span class ="highlight">The Lantern</span> is nowhere to be found. Dejected, you're about to book a flight home when the not-lantern you stole vibrates. It's a burner phone!</p>
+    <p>
+      You dive headfirst through the temple entrance, right as the boulder
+      crashes behind you. Unfortunately, you couldn't rescue your fedora in time
+      — RIP. But you notice another piece of a
+      <em><a href="/puzzle/the-blueprint">blueprint</a></em> wedged between the
+      stone tiles.
+    </p>
+    <p>
+      <span class="highlight">The Rival</span> is nowhere to be seen. And
+      <span class="highlight">The Lantern</span> is nowhere to be found.
+      Dejected, you're about to book a flight home when the not-lantern you
+      stole vibrates. It's a burner phone!
+    </p>
     <div class="r2">
-        <div class="frame-blue crack1">
-            <div class="phone">
-                <div class="phone-text">
-                    <div class="phone-receive">Hello <span class ="highlight">The Solver</span></div> 
-                    <div class="phone-send">Who is this?</div> 
-                    <div class="phone-receive">Now now, don’t go and <span class ="highlight">THROW A TEMPLE TANTRUM</span></div> 
-                    <div class="phone-send">Very funny</div> 
-                    <div class="phone-receive">I’m glad you’re not pancaked. Gives me more opportunities to best you. So <span class ="highlight">The Lantern</span> wasn’t there, huh?</div> 
-                    <div class="phone-send">Nope</div>
-                    <div class="phone-receive">It’s almost like I led you on a fun-filled adventure so I could steal it for myself? Well, I learned that <span class ="highlight">The Lantern</span> isn’t physical. Check this out: ssh admin@192.168.1.1, pw=plzNoHax</div>  
-                    <p style="color: darkgray"><i>Sent by <span class ="highlight">The Rival</span></i></p>
-                    <div class="phone-send dotdotdot">...</div>
-                </div>
+      <div class="frame-blue crack1">
+        <div class="phone">
+          <div class="phone-text">
+            <div class="phone-receive">
+              Hello <span class="highlight">The Solver</span>
             </div>
+            <div class="phone-send">Who is this?</div>
+            <div class="phone-receive">
+              Now now, don’t go and
+              <span class="highlight">THROW A TEMPLE TANTRUM</span>
+            </div>
+            <div class="phone-send">Very funny</div>
+            <div class="phone-receive">
+              I’m glad you’re not pancaked. Gives me more opportunities to best
+              you. So <span class="highlight">The Lantern</span> wasn’t there,
+              huh?
+            </div>
+            <div class="phone-send">Nope</div>
+            <div class="phone-receive">
+              It’s almost like I led you on a fun-filled adventure so I could
+              steal it for myself? Well, I learned that
+              <span class="highlight">The Lantern</span> isn’t physical. Check
+              this out: ssh admin@192.168.1.1, pw=plzNoHax
+            </div>
+            <p style="color: darkgray">
+              <i>Sent by <span class="highlight">The Rival</span></i>
+            </p>
+            <div class="phone-send dotdotdot">...</div>
+          </div>
         </div>
+      </div>
     </div>
-    <p>You're skeptical your art thief skills will extend to cybercrime. But you don your three-wolf-moon shirt, dust off your leather duster, and get hacking!</p>
+    <p>
+      You're skeptical your art thief skills will extend to cybercrime. But you
+      don your three-wolf-moon shirt, dust off your leather duster, and get
+      hacking!
+    </p>
     <br />
-    <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
-</div>
-{% endif %}
-
-{% if key == 'meta3_done' %}
-<div class="no-break story-chunk" id="4">
+    <h5><a href="{% url 'the-grand-front' %}">Continue your heist</a></h5>
+  </div>
+  {% endif %} {% if key == 'meta3_done' %}
+  <div class="no-break story-chunk" id="4">
     <h4>The Rendezvous</h4>
-    <img src="{% static 'story_resources/header-4.png' %}" alt="header" width="100%">
+    <img
+      src="{% static 'story_resources/header-4.png' %}"
+      alt="header"
+      width="100%"
+    />
     <h4>&nbsp;</h4>
-    <p>You type furiously while the monitor's glow reflects in your eyes, thinking to yourself <i>Enhance! I'm in!</i> Wait, what do movie hackers say? Well, whatever you did seems to have worked, as the digital locks pixelate away, and another piece of the <em><a href="/puzzle/the-blueprint">blueprint</a></em> pops out of the printer. You steady your mouse hand, double click, and...</p> 
+    <p>
+      You type furiously while the monitor's glow reflects in your eyes,
+      thinking to yourself <i>Enhance! I'm in!</i> Wait, what do movie hackers
+      say? Well, whatever you did seems to have worked, as the digital locks
+      pixelate away, and another piece of the
+      <em><a href="/puzzle/the-blueprint">blueprint</a></em> pops out of the
+      printer. You steady your mouse hand, double click, and...
+    </p>
     <div class="r3">
-        <div class="window">
-            <div class="name" style="font-family: monospace; text-align: center;">its_a_trap.malware</div>
-            <div class="profile">
-                <div class="avatar">
-                    <img src="{% static 'story_resources/pixel.png' %}" alt="pixel rival"  width="100%">
-                </div>
-                <div class="profile-detail">
-                    :Slow clap: :Slow clap: :Slow clap: Did you like my sweet honeypot, <span class ="highlight">The Solver</span>? Sorry you had to sit there and <span class ="highlight">TWIDDLE YOUR THUMB DRIVE</span> while I did all the heavy lifting.<br /><br />
-                    Why, might you ask, am I putting you through all this? For that, I think it’s best we meet in person. It’s time we talked about <span class ="highlight">The Lantern</span>.
-                </div>
-            </div>
+      <div class="window">
+        <div class="name" style="font-family: monospace; text-align: center">
+          its_a_trap.malware
         </div>
+        <div class="profile">
+          <div class="avatar">
+            <img
+              src="{% static 'story_resources/pixel.png' %}"
+              alt="pixel rival"
+              width="100%"
+            />
+          </div>
+          <div class="profile-detail">
+            :Slow clap: :Slow clap: :Slow clap: Did you like my sweet honeypot,
+            <span class="highlight">The Solver</span>? Sorry you had to sit
+            there and
+            <span class="highlight">TWIDDLE YOUR THUMB DRIVE</span> while I did
+            all the heavy lifting.<br /><br />
+            Why, might you ask, am I putting you through all this? For that, I
+            think it’s best we meet in person. It’s time we talked about
+            <span class="highlight">The Lantern</span>.
+          </div>
+        </div>
+      </div>
     </div>
-    <p><span class ="highlight">The Rival</span> is not one to live in the shadows on their days off. Everyone knows about their super awesome hideout. Heck, you've visited here and there during the peak days of your rivalry, if not for a cup of tea and to steal back a Picasso.</p>
-    <p>You're swiftly escorted between butlers and security guards to the parlor, where <span class ="highlight">The Rival</span> is waiting for you. They pull out what could only be <span class ="highlight">The Lantern</span>!</p>
-    <img src="{% static 'story_resources/manor.png' %}" alt="manor" width="100%">
+    <p>
+      <span class="highlight">The Rival</span> is not one to live in the shadows
+      on their days off. Everyone knows about their super awesome hideout. Heck,
+      you've visited here and there during the peak days of your rivalry, if not
+      for a cup of tea and to steal back a Picasso.
+    </p>
+    <p>
+      You're swiftly escorted between butlers and security guards to the parlor,
+      where <span class="highlight">The Rival</span> is waiting for you. They
+      pull out what could only be <span class="highlight">The Lantern</span>!
+    </p>
+    <img
+      src="{% static 'story_resources/manor.png' %}"
+      alt="manor"
+      width="100%"
+    />
     <br /><br />
-    <p>“I apologize for the runaround,” they say. “I stole <span class ="highlight">The Lantern</span> months ago, then soon realized in order to activate it, I would need someone that rivaled my skills.</p>
-    <p>“So I played <span class ="highlight">The Fixer</span> and sent you down this path. To see if you were still up to the task. To see...,” they hesitate, “if I could trust you”.</p>
-    <p>“Along your way, I've left you blueprint pieces. So where is <span class ="highlight">The Lantern</span>?” They slide you one final note. You pull out the completed <em><a href="/puzzle/the-blueprint">blueprint</a></em>, place the note next to it, and look down at the artifact you've worked so hard to find. “The answer is right in front of you. No slacking!”</p>
+    <p>
+      “I apologize for the runaround,” they say. “I stole
+      <span class="highlight">The Lantern</span> months ago, then soon realized
+      in order to activate it, I would need someone that rivaled my skills.
+    </p>
+    <p>
+      “So I played <span class="highlight">The Fixer</span> and sent you down
+      this path. To see if you were still up to the task. To see...,” they
+      hesitate, “if I could trust you”.
+    </p>
+    <p>
+      “Along your way, I've left you blueprint pieces. So where is
+      <span class="highlight">The Lantern</span>?” They slide you one final
+      note. You pull out the completed
+      <em><a href="/puzzle/the-blueprint">blueprint</a></em
+      >, place the note next to it, and look down at the artifact you've worked
+      so hard to find. “The answer is right in front of you. No slacking!”
+    </p>
     <br />
-    <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
-</div>
-{% endif %}
-
-{% if key == 'meta4_done' %}
-<div class="no-break story-chunk" id="5">
+    <h5><a href="{% url 'the-grand-front' %}">Continue your heist</a></h5>
+  </div>
+  {% endif %} {% if key == 'meta4_done' %}
+  <div class="no-break story-chunk" id="5">
     <h4>The Rekindling</h4>
-    <img src="{% static 'story_resources/header-5.png' %}" alt="header" width="100%">
+    <img
+      src="{% static 'story_resources/header-5.png' %}"
+      alt="header"
+      width="100%"
+    />
     <h4>&nbsp;</h4>
-    <p>Together, you perform the steps needed to activate <span class ="highlight">The Lantern</span>, and in doing so <span class ="highlight">REKINDLE AN OLD FLAME</span>. The power of the ancient artifact is to see each other in a different <em>light</em>. Some of the most exhilarating moments of your life have been shared with <span class ="highlight">The Rival</span>. Really, you're more alike than different. And besides, it was never about the value of the target. It was the thrill of a heist most <em>grand</em>, and someone to share it with.</p> 
-    <img src="{% static 'story_resources/finale.png' %}" alt="rekindled" width="100%">
+    <p>
+      Together, you perform the steps needed to activate
+      <span class="highlight">The Lantern</span>, and in doing so
+      <span class="highlight">REKINDLE AN OLD FLAME</span>. The power of the
+      ancient artifact is to see each other in a different <em>light</em>. Some
+      of the most exhilarating moments of your life have been shared with
+      <span class="highlight">The Rival</span>. Really, you're more alike than
+      different. And besides, it was never about the value of the target. It was
+      the thrill of a heist most <em>grand</em>, and someone to share it with.
+    </p>
+    <img
+      src="{% static 'story_resources/finale.png' %}"
+      alt="rekindled"
+      width="100%"
+    />
     <br /><br />
-    <p><em>Congratulations</em> on completing <span class ="highlight">The Grand Hunt</span>! Now go out and find your own lantern*</p>
-    <p style="font-size: 0.8em">*but seriously, please don't steal from us, we have nothing left</p>
-    <h5><a href="{% url 'the-grand-heist' %}">Reminisce about your heist</a></h5>
+    <p>
+      <em>Congratulations</em> on completing
+      <span class="highlight">The Grand Hunt</span>! Now go out and find your
+      own lantern*
+    </p>
+    <p style="font-size: 0.8em">
+      *but seriously, please don't steal from us, we have nothing left
+    </p>
+    <h5>
+      <a href="{% url 'the-grand-front' %}">Reminisce about your heist</a>
+    </h5>
     <br /><br />
-</div>
-{% endif %}
-
-{% endfor %}
-
+  </div>
+  {% endif %} {% endfor %}
 </main>
 
 {% endblock %}

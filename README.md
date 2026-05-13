@@ -11,7 +11,7 @@ We will try to respond to emails or pull requests when we can, but this isn't gu
   - We recommend that you install virtualenv: `pip install virtualenv`. This allows you to install this project's dependencies into a "virtual environment" contained in this directory.
     - You can also proceed without virtualenv (skip these steps), which will install the dependencies globally. This is not recommended if you develop in other Python projects on the same machine.
   - Create a virtualenv: `virtualenv venv`
-    - If you have both Python 2 and Python 3 on your system, use the `-p` argument to `virtualenv` to point to the correct Python runtime, for example: `virtualenv venv -p python3`
+    - If you have both Python 2 and Python 3 on your system, use the `-p` argument to `virtualenv` to point to the correct Python runtime, for example: `virtualenv venv -p python3.10`
     - If this doesn't work, you may have to add to your path; try `python -m virtualenv venv` instead if you don't want to do that.
   - Activate the virtualenv with `source venv/bin/activate`
     - Alternatively use `venv/bin/activate.csh` or `venv/bin/activate.fish` if you're using csh or fish.
@@ -34,123 +34,122 @@ We will try to respond to emails or pull requests when we can, but this isn't gu
 
 - ...even?
 
-  + The site is built on Django, which has a lot of features and is pretty self-contained. Usually, you will start a local server with `./manage.py runserver` and make changes within the `puzzles/` subdirectory. `runserver` will watch for code changes and automatically restart if needed.
+  - The site is built on Django, which has a lot of features and is pretty self-contained. Usually, you will start a local server with `./manage.py runserver` and make changes within the `puzzles/` subdirectory. `runserver` will watch for code changes and automatically restart if needed.
 
 - ...set up the database?
 
-  + The site is set up to use a `db.sqlite3` file in the root of this repository as its database. If this doesn't exist, Django will create a new empty database when you run `./manage.py migrate`. It's perfectly fine to start with this, but you won't have any puzzles populated and you almost certainly want to create a superuser.
+  - The site is set up to use a `db.sqlite3` file in the root of this repository as its database. If this doesn't exist, Django will create a new empty database when you run `./manage.py migrate`. It's perfectly fine to start with this, but you won't have any puzzles populated and you almost certainly want to create a superuser.
 
     If you just want to try out the website quickly with some sample data, you can run `./manage.py loaddata sample.yaml` (after `./manage.py migrate`) to load a sample hunt, an admin account (username and password `admin`), and a test account with a team (username and password `test`). You can view the templates used to render the puzzles in the [puzzles/templates/puzzle_bodies](puzzles/templates/puzzle_bodies) and [puzzles/templates/solution_bodies](puzzles/templates/solution_bodies) folders, which you can also base your puzzles/solutions off of.
 
 - ...be a superuser?
 
-  + Superusers are a Django concept that allows users access to the `/admin` control panel on the server. We have additionally set it to control access to certain site pages/actions, such as replying to hint requests from teams, or viewing solutions before the deadline. `./manage.py createsuperuser` will make a new superuser from the command line, but this user won't be associated with any team on the site (so it won't be able to e.g. solve puzzles). To fix this, you can either get a prepopulated `db.sqlite3` from a friend, hit the `Create team` button in the top bar on the main site to attach a new team to your user, or go into `/admin` and swap out the user on an existing team for your new one.
+  - Superusers are a Django concept that allows users access to the `/admin` control panel on the server. We have additionally set it to control access to certain site pages/actions, such as replying to hint requests from teams, or viewing solutions before the deadline. `./manage.py createsuperuser` will make a new superuser from the command line, but this user won't be associated with any team on the site (so it won't be able to e.g. solve puzzles). To fix this, you can either get a prepopulated `db.sqlite3` from a friend, hit the `Create team` button in the top bar on the main site to attach a new team to your user, or go into `/admin` and swap out the user on an existing team for your new one.
 
 - ...edit the database?
 
-  + The `/admin` control panel lets you query and modify all of the objects in the database. It should be pretty straightforward to use. It does use the same login as the main site, so you won't be able to log in as a superuser for `/admin` and a non-superuser for the main site in the same browser window.
+  - The `/admin` control panel lets you query and modify all of the objects in the database. It should be pretty straightforward to use. It does use the same login as the main site, so you won't be able to log in as a superuser for `/admin` and a non-superuser for the main site in the same browser window.
 
 - ...be a testsolver?
 
-  + We have a notion of prerelease testsolver that is separate from that of superuser. Prerelease testsolvers can see all the puzzles even before the hunt starts. To make a prerelease testsolver, you can find a team in `/admin` and set the relevant checkbox there. Or, to make yourself a prerelease testsolver as a superuser, use the `Toggle testsolver` button in the top bar.
+  - We have a notion of prerelease testsolver that is separate from that of superuser. Prerelease testsolvers can see all the puzzles even before the hunt starts. To make a prerelease testsolver, you can find a team in `/admin` and set the relevant checkbox there. Or, to make yourself a prerelease testsolver as a superuser, use the `Toggle testsolver` button in the top bar.
 
 - ...set up a "real" testsolve?
 
-  + Go to `/admin` and set a team's start offset. The greater this offset, the earlier that team will be able to start and progress in the hunt. This can be used to run a full-hunt testsolve to test the unlock structure.
+  - Go to `/admin` and set a team's start offset. The greater this offset, the earlier that team will be able to start and progress in the hunt. This can be used to run a full-hunt testsolve to test the unlock structure.
 
 - ...see some other team's view of the hunt?
 
-  + As a superuser, go to `/teams` and click on any `Impersonate` button. Be careful with this, as you don't want to accidentally perform any actions on behalf of the team.
+  - As a superuser, go to `/teams` and click on any `Impersonate` button. Be careful with this, as you don't want to accidentally perform any actions on behalf of the team.
 
 - ...add a "keep going" message? give a team more guesses? delete a team? etc.
 
-  + All these things should be done through `/admin`.
+  - All these things should be done through `/admin`.
 
 - ...give myself hints for testing? reset my hints? show me a puzzle's answer? etc.
 
-  + All these things can be done through the shortcuts menu in the top bar as a superuser (but can also be done through `/admin`).
+  - All these things can be done through the shortcuts menu in the top bar as a superuser (but can also be done through `/admin`).
 
 - ...postprod a puzzle?
 
-  + You'll need both a prerelease testsolver team, and a database Puzzle object (either create one or obtain a `db.sqlite3` with the puzzles set up) for your puzzle. The `body_template` field on the Puzzle defines which template file will be used (this doesn't have to match the `slug` field, though it may be nice if it does). Put the body of the puzzle in a file under `puzzles/templates/puzzle_bodies`. Put required static resources under `puzzles/static/puzzle_resources/$PUZZLE`. Put solutions and their resources under `puzzles/templates/solution_bodies`. See the sample files there as guides.
+  - You'll need both a prerelease testsolver team, and a database Puzzle object (either create one or obtain a `db.sqlite3` with the puzzles set up) for your puzzle. The `body_template` field on the Puzzle defines which template file will be used (this doesn't have to match the `slug` field, though it may be nice if it does). Put the body of the puzzle in a file under `puzzles/templates/puzzle_bodies`. Put required static resources under `puzzles/static/puzzle_resources/$PUZZLE`. Put solutions and their resources under `puzzles/templates/solution_bodies`. See the sample files there as guides.
 
     Puzzles and solutions (but not other templates) support Markdown (though the library may or may not have some bugs). You'll override either `puzzle-body-md` or `puzzle-body-html` depending on whether you'd like to write Markdown or HTML. The same applies to solution bodies, author notes, and appendices.
 
 - ...edit an email template?
 
-  + All templates used to render email bodies have two versions, HTML and plain text, with the same filename. If you change one, be sure to change the other to match.
+  - All templates used to render email bodies have two versions, HTML and plain text, with the same filename. If you change one, be sure to change the other to match.
 
 - ...create a new model?
 
-  + Add a class to `models.py` on the pattern of the ones already there. To make it show up in `/admin`, add it to `admin.py` as well. Finally, if you add or change any database model or field, you'll need to run `./manage.py makemigrations` to create a migration file, then check that in.
+  - Add a class to `models.py` on the pattern of the ones already there. To make it show up in `/admin`, add it to `admin.py` as well. Finally, if you add or change any database model or field, you'll need to run `./manage.py makemigrations` to create a migration file, then check that in.
 
 - ...use a model?
 
-  + The code should have plenty of examples for creating and reading database objects, and Django's online documentation is quite comprehensive. As a general tip, Django's unobtrusive syntax for database objects means it's very easy to trigger a lookup and not notice. It's mostly important to avoid doing `O(n)` (or worse) separate database lookups for one query; otherwise, don't worry about it too much. However, if you'd like to find opportunities for optimization, you can set up Django to print database queries to the console by changing the `django.db.backends` log setting.
+  - The code should have plenty of examples for creating and reading database objects, and Django's online documentation is quite comprehensive. As a general tip, Django's unobtrusive syntax for database objects means it's very easy to trigger a lookup and not notice. It's mostly important to avoid doing `O(n)` (or worse) separate database lookups for one query; otherwise, don't worry about it too much. However, if you'd like to find opportunities for optimization, you can set up Django to print database queries to the console by changing the `django.db.backends` log setting.
 
 - ...create a new view?
 
-  + Add a function to `views.py` that returns a response object (usually by rendering a template, but you can also create one and write to it directly). Check if you want to gate it behind any of the decorators used in the file. You will need to add your view to `urls.py` as well to make it accessible. The name you put in `urls.py` should be used with functions like `{% url %}` (in templates) or `reverse` and `redirect` (in Python) to generate the URL for your page whenever you need to output it.
+  - Add a function to `views.py` that returns a response object (usually by rendering a template, but you can also create one and write to it directly). Check if you want to gate it behind any of the decorators used in the file. You will need to add your view to `urls.py` as well to make it accessible. The name you put in `urls.py` should be used with functions like `{% url %}` (in templates) or `reverse` and `redirect` (in Python) to generate the URL for your page whenever you need to output it.
 
 - ...create a view called by a puzzle?
 
-  + If your view is for a specific puzzle, you should put it in `puzzlehandlers/`. That directory also contains helpers for rate limiting so teams can't brute-force your puzzle. Then in your puzzle template, you can include Javascript or forms that call your new view however you wish.
+  - If your view is for a specific puzzle, you should put it in `puzzlehandlers/`. That directory also contains helpers for rate limiting so teams can't brute-force your puzzle. Then in your puzzle template, you can include Javascript or forms that call your new view however you wish.
 
 - ...add CSS?
 
-  + If the element you're styling is in `base.html` or appears in multiple separate pages, put it in `base.css`. Otherwise, just put it inline in your template.
+  - If the element you're styling is in `base.html` or appears in multiple separate pages, put it in `base.css`. Otherwise, just put it inline in your template.
 
 - ...add template context?
 
-  + Context parameters are how to pass information from Python into templates. Similar to the above, if you want to use the same data in more than one page, consider putting it in `context.py`, which defines context shared between all page templates. Otherwise, put it in a dict passed to `render` in your `view.py` function.
+  - Context parameters are how to pass information from Python into templates. Similar to the above, if you want to use the same data in more than one page, consider putting it in `context.py`, which defines context shared between all page templates. Otherwise, put it in a dict passed to `render` in your `view.py` function.
 
 - ...add template functions?
 
-  + To create a custom tag or filter that's callable from templates (for example, we have one that takes a timestamp and formats it), you have to put it in `templatetags/`. (This is enforced by Django for some reason.) Then, in the template file you're changing, include `{% load puzzle_tags %}` at the top.
+  - To create a custom tag or filter that's callable from templates (for example, we have one that takes a timestamp and formats it), you have to put it in `templatetags/`. (This is enforced by Django for some reason.) Then, in the template file you're changing, include `{% load puzzle_tags %}` at the top.
 
 - ...set up the unlock structure?
 
-  + The unlock threshold for each puzzle is defined in its database entry. Most other parameters and logic are in `hunt_config.py`. You will probably just have to edit these case by case, but note that e.g. it is not necessary to make code changes in order to update puzzle unlock thresholds.
+  - The unlock threshold for each puzzle is defined in its database entry. Most other parameters and logic are in `hunt_config.py`. You will probably just have to edit these case by case, but note that e.g. it is not necessary to make code changes in order to update puzzle unlock thresholds.
 
 - ...enable the story or wrapup page?
 
-  + In addition to making the necessary template changes, in order to make these pages visible, you have to set the `*_PAGE_VISIBLE` flags in `hunt_config.py` to true.
+  - In addition to making the necessary template changes, in order to make these pages visible, you have to set the `*_PAGE_VISIBLE` flags in `hunt_config.py` to true.
 
 - ...do analysis of what teams do during the hunt?
 
-  + Use the shortcuts menu to download a hint log, guess log, and puzzle log. The first two are generated from the database; the latter from whatever calls `messaging.log_puzzle_info`. For example, if you have a puzzle that's a game, you can set up an endpoint to log whenever a team wins. You can also set up whatever additional logs you wish (and if you want, expose them using a new view over the bridge). Then you can write your own scripts or spreadsheets to analyze them.
+  - Use the shortcuts menu to download a hint log, guess log, and puzzle log. The first two are generated from the database; the latter from whatever calls `messaging.log_puzzle_info`. For example, if you have a puzzle that's a game, you can set up an endpoint to log whenever a team wins. You can also set up whatever additional logs you wish (and if you want, expose them using a new view over the bridge). Then you can write your own scripts or spreadsheets to analyze them.
 
 - ...time zones?
 
-  + For reasons that I'm sure made sense at the time (heh), Django stores timestamps as UTC in the database and converts them to the currently set time zone (i.e. Eastern) when _rendering templates_. This means that you don't need to worry if you include a timestamp in a template file, but if you're trying to render it in Python (_including_ in `templatetags/`), you may have to adjust its time zone explicitly to prevent it from showing as UTC.
+  - For reasons that I'm sure made sense at the time (heh), Django stores timestamps as UTC in the database and converts them to the currently set time zone (i.e. Eastern) when _rendering templates_. This means that you don't need to worry if you include a timestamp in a template file, but if you're trying to render it in Python (_including_ in `templatetags/`), you may have to adjust its time zone explicitly to prevent it from showing as UTC.
 
 - ...issue errata?
 
-  + Errata are stored in the database. You can go to `/errata` as a superuser to create one. Errata can be shown on the puzzle page, the top-level updates page, or both; you can also create a general announcement that's not associated with a puzzle. If you save an erratum as unpublished, you can see how it looks before revealing it to solvers. The updates page won't be available to solvers until there's something they can see there.
+  - Errata are stored in the database. You can go to `/errata` as a superuser to create one. Errata can be shown on the puzzle page, the top-level updates page, or both; you can also create a general announcement that's not associated with a puzzle. If you save an erratum as unpublished, you can see how it looks before revealing it to solvers. The updates page won't be available to solvers until there's something they can see there.
 
 - ...answer hints?
 
-  + You can find the hint interface at `/hints`, through links in Discord hint messages, or via the red hint icon that appears for superusers browsing the site when there are unanswered hints. The interface lets you claim a hint, write a response, and send it off to the team. If a hint is marked as obsolete, that means the team solved the puzzle while it was open; if refunded, then the responder decided not to charge them a hint token. If a hint is a followup, that means it's part of a conversation thread with the team and doesn't cost a token either.
+  - You can find the hint interface at `/hints`, through links in Discord hint messages, or via the red hint icon that appears for superusers browsing the site when there are unanswered hints. The interface lets you claim a hint, write a response, and send it off to the team. If a hint is marked as obsolete, that means the team solved the puzzle while it was open; if refunded, then the responder decided not to charge them a hint token. If a hint is a followup, that means it's part of a conversation thread with the team and doesn't cost a token either.
 
 - ... use websockets?
 
-  + We now have somewhat experimental websocket support! Take a look at the consumer classes in `messaging.py`; there are prototypes for two-way communication with a single browser tab, or for broadcasting to all members of a team or all logged-in admins. If you want something different, say for a "Teamwork Time" puzzle where team members interact with each other, it shouldn't be hard to add. Then add your consumer to `routing.py` and use `openSocket` in JS to connect to it.
+  - We now have somewhat experimental websocket support! Take a look at the consumer classes in `messaging.py`; there are prototypes for two-way communication with a single browser tab, or for broadcasting to all members of a team or all logged-in admins. If you want something different, say for a "Teamwork Time" puzzle where team members interact with each other, it shouldn't be hard to add. Then add your consumer to `routing.py` and use `openSocket` in JS to connect to it.
 
 - ... provide the site in my language?
 
-  + Generate the translations placeholders for your language `lang_COUNTRY` (e.g. en_US):
-    + `django-admin makemessages -e html,txt,py,svg -l lang_COUNTRY`
-    + `django-admin makemessages -d djangojs -l lang_COUNTRY`
-  + add your translations in msgstr in the django.po and djangojs.po files under locale/`lang_COUNTRY`
-  + Compile the translations:
-    + `django-admin compilemessages`
-  + create a gph/formats/`lang` (e.g. en) folder and copy an existing one (e.g. en to be translated, see https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-FORMAT_MODULE_PATH). This contains the date/time formats used in django templates (see https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#std:templatefilter-date)
-  + set LANGUAGE_CODE in base/settings.py as `lang-country` (e.g. en-us)
-  + note that the compiled .mo translated files are not in the repo, make sure to make them part of the deploy to your site
-  + see https://docs.djangoproject.com/en/4.0/topics/i18n/ for more info
-  + note that django-admin makemessages doesn't handle escaped characters correctly in python strings, make sure to use the actual unicode character or its html sequence instead of its escaped code value (e.g. `’` instead of `\u2019`)
-  + contact [enigmatix](mailto:gaulois.team@gmail.com) if you need help with localization of your site
-
+  - Generate the translations placeholders for your language `lang_COUNTRY` (e.g. en_US):
+    - `django-admin makemessages -e html,txt,py,svg -l lang_COUNTRY`
+    - `django-admin makemessages -d djangojs -l lang_COUNTRY`
+  - add your translations in msgstr in the django.po and djangojs.po files under locale/`lang_COUNTRY`
+  - Compile the translations:
+    - `django-admin compilemessages`
+  - create a gph/formats/`lang` (e.g. en) folder and copy an existing one (e.g. en to be translated, see https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-FORMAT_MODULE_PATH). This contains the date/time formats used in django templates (see https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#std:templatefilter-date)
+  - set LANGUAGE_CODE in base/settings.py as `lang-country` (e.g. en-us)
+  - note that the compiled .mo translated files are not in the repo, make sure to make them part of the deploy to your site
+  - see https://docs.djangoproject.com/en/4.0/topics/i18n/ for more info
+  - note that django-admin makemessages doesn't handle escaped characters correctly in python strings, make sure to use the actual unicode character or its html sequence instead of its escaped code value (e.g. `’` instead of `\u2019`)
+  - contact [enigmatix](mailto:gaulois.team@gmail.com) if you need help with localization of your site
 
 # Repository Details
 
@@ -224,7 +223,7 @@ If something goes very wrong, you can try SSHing to the server and editing files
 
 In addition to the hunt start and end time, there's also a somewhat non-obvious "hunt close time" in `hunt_config.py`. Here's how it works:
 
-- When the hunt *ends*, the leaderboard freezes, hint requests are disabled, and solutions are published, but account signups and progressing through the hunt are still allowed. The idea is to give people extra time to finish the hunt at their own pace if they want, but without any of the maintenance costs of actually staffing the hunt (responding to hint requests, avoiding spoilers for competition fairness).
-- When the hunt *closes*, account registration and log ins are actually disabled.
+- When the hunt _ends_, the leaderboard freezes, hint requests are disabled, and solutions are published, but account signups and progressing through the hunt are still allowed. The idea is to give people extra time to finish the hunt at their own pace if they want, but without any of the maintenance costs of actually staffing the hunt (responding to hint requests, avoiding spoilers for competition fairness).
+- When the hunt _closes_, account registration and log ins are actually disabled.
 
 You can, of course, set the hunt close time to be equal to the hunt end time to skip the in-between stage.

@@ -1,422 +1,613 @@
-- model: puzzles.Round
+- model: puzzles.round
   pk: 1
   fields:
+    name: 'Chapter 1: The Front'
+    slug: the-front
+    meta: 44
     order: 1
-    name: "Chapter 1: The Museum of Superb Relics"
-    slug: the-museum-of-superb-relics
-    meta: 11
-- model: puzzles.Round
+- model: puzzles.round
   pk: 2
   fields:
+    name: 'Chapter 2: The Investigation'
+    slug: the-investigation
+    meta: null
     order: 2
-    name: "Chapter 2: The Lost Temple"
-    slug: the-lost-temple
-    meta: 22
-- model: puzzles.Round
+- model: puzzles.round
   pk: 3
   fields:
+    name: 'Chapter 3: The Family'
+    slug: the-family
+    meta: null
     order: 3
-    name: "Chapter 3: The Hack"
-    slug: the-hack
-    meta: 33
-- model: puzzles.Round
+- model: puzzles.round
   pk: 4
   fields:
-    order: 4
-    name: "The Blueprint"
-    slug: the-blueprint
-    meta: 35
-
-- model: puzzles.Puzzle
-  pk: 1
-  fields:
-    order: 1
-    name: Tickets Please
-    slug: tickets-please
-    body_template: tickets-please.html
-    answer: BANK TRANSFER
-    round: 1
-    unlock_global: -1
-    unlock_local: 0
-- model: puzzles.Puzzle
-  pk: 2
-  fields:
-    order: 2
-    name: Reading the Room
-    slug: reading-the-room
-    body_template: reading-the-room.html
-    answer: BARBIE DOLL
-    round: 1
-    unlock_global: -1
-    unlock_local: 0
-- model: puzzles.Puzzle
-  pk: 3
-  fields:
-    order: 3
-    name: A Sour Experience
-    slug: a-sour-experience
-    body_template: a-sour-experience.html
-    answer: CASUAL FRIDAY
-    round: 1
-    unlock_global: -1
-    unlock_local: 0
-- model: puzzles.Puzzle
-  pk: 4
-  fields:
-    order: 4
-    name: Meet the Museum Staff
-    slug: meet-the-museum-staff
-    body_template: meet-the-museum-staff.html
-    answer: ROAD BLOCK
-    round: 1
-    unlock_global: -1
-    unlock_local: 0
-- model: puzzles.Puzzle
+    name: The Finale
+    slug: the-finale
+    meta: null
+    order: 5
+- model: puzzles.round
   pk: 5
   fields:
-    order: 5
-    name: Pinching Pig-Pennies
-    slug: pinching-pig-pennies
-    body_template: pinching-pig-pennies.html
-    answer: JELLO DESSERT
-    round: 1
-    unlock_global: -1
-    unlock_local: 1
-- model: puzzles.Puzzle
-  pk: 6
+    name: 'Chapter 4: The Notebook'
+    slug: the-notebook
+    meta: null
+    order: 4
+- model: puzzles.puzzle
+  pk: 1
   fields:
-    order: 6
-    name: Have Your Say
-    slug: have-your-say
-    body_template: have-your-say.html
-    answer: UNDER PRESSURE
+    name: Beast on a Leash
+    slug: beast
+    body_template: beast.html
+    answer: TAGALONG
     round: 1
+    order: 2
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 0
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 36
+  fields:
+    name: Crowe's Tavern
+    slug: crowes
+    body_template: crowes.html
+    answer: Lacking
+    round: 1
+    order: 1
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 0
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 37
+  fields:
+    name: The Knowhow Establishment
+    slug: knowhow
+    body_template: knowhow.html
+    answer: Completely Booked
+    round: 1
+    order: 4
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 2
-- model: puzzles.Puzzle
-  pk: 7
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 38
   fields:
-    order: 7
-    name: In the Jungle
-    slug: in-the-jungle
-    body_template: in-the-jungle.html
-    answer: RANT AND RAVE
+    name: Sun's Out Holidays
+    slug: suns-out
+    body_template: suns-out.html
+    answer: Staycation
     round: 1
+    order: 3
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 39
+  fields:
+    name: Unorthodox Photography
+    slug: unorthodox
+    body_template: unorthodox.html
+    answer: Unfocused
+    round: 1
+    order: 5
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 3
-- model: puzzles.Puzzle
-  pk: 8
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 40
   fields:
-    order: 8
-    name: Reconnaissance
-    slug: reconnaissance
-    body_template: reconnaissance.html
-    answer: THIS MEANS WAR
+    name: Growing Grin Orthodontics
+    slug: growing-grin
+    body_template: growing-grin.html
+    answer: EXTRACTION
     round: 1
+    order: 6
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 4
-- model: puzzles.Puzzle
-  pk: 9
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 41
   fields:
-    order: 9
-    name: Choosy Collectors
-    slug: choosy-collectors
-    body_template: choosy-collectors.html
-    answer: WOULD YOU RATHER
+    name: Endpoint Strategists
+    slug: endpoint
+    body_template: endpoint.html
+    answer: CONCEPTS
     round: 1
+    order: 7
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 5
-- model: puzzles.Puzzle
-  pk: 10
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 42
   fields:
-    order: 10
-    name: Crossword Puzzle No. 1 in Black and White
-    slug: crossword-puzzle-no-1-in-black-and-white
-    body_template: crossword-puzzle-no-1-in-black-and-white.html
-    answer: COME AND GO
+    name: Tea Store of the Future
+    slug: tea-store
+    body_template: tea-store.html
+    answer: RICE BOWL
     round: 1
+    order: 8
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 6
-- model: puzzles.Puzzle
-  pk: 11
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 43
   fields:
-    order: 11 
-    name: Under Pollock And Key
-    slug: under-pollock-and-key
-    body_template: under-pollock-and-key.html
-    answer: WORK HARD FOR THE MONET
-    is_meta: True
+    name: So U Think U Can Dance
+    slug: dance
+    body_template: dance.html
+    answer: ADROITMOVES
     round: 1
+    order: 9
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 7
-
-- model: puzzles.Puzzle
-  pk: 12
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 44
   fields:
-    order: 1
-    name: Snakes... Why did it have to be snakes?
-    slug: snakes-why-did-it-have-to-be-snakes
-    body_template: snakes-why-did-it-have-to-be-snakes.html
-    answer: FER-DE-LANCE
-    round: 2
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 13
-  fields:
-    order: 2
-    name: Burial Flags
-    slug: burial-flags
-    body_template: burial-flags.html
-    answer: DEATH WARDS
-    round: 2
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 14
-  fields:
-    order: 3
-    name: Sound and Movement
-    slug: sound-and-movement
-    body_template: sound-and-movement.html
-    answer: DANCERS ALL
-    round: 2
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 15
-  fields:
-    order: 4
-    name: Meandering Streams
-    slug: meandering-streams
-    body_template: meandering-streams.html
-    answer: RIVER WATER
-    round: 2
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 16
-  fields:
-    order: 5
-    name: Fearsome Foes
-    slug: fearsome-foes
-    body_template: fearsome-foes.html
-    answer: EXPEDITION
-    round: 2
-    unlock_global: -1
-    unlock_local: 1
-- model: puzzles.Puzzle
-  pk: 17
-  fields:
-    order: 6
-    name: Blocks
-    slug: blocks
-    body_template: blocks.html
-    answer: ALTAR STONE
-    round: 2
-    unlock_global: -1
-    unlock_local: 2
-- model: puzzles.Puzzle
-  pk: 18
-  fields:
-    order: 7
-    name: The River
-    slug: the-river
-    body_template: the-river.html
-    answer: CROCODILES
-    round: 2
-    unlock_global: -1
-    unlock_local: 3
-- model: puzzles.Puzzle
-  pk: 19
-  fields:
-    order: 8
-    name: Sun, Moon and Stars
-    slug: sun-moon-and-stars
-    body_template: sun-moon-and-stars.html
-    answer: SUN WORSHIP
-    round: 2
-    unlock_global: -1
-    unlock_local: 4
-- model: puzzles.Puzzle
-  pk: 20
-  fields:
-    order: 9
-    name: Star Chart
-    slug: star-chart
-    body_template: star-chart.html
-    answer: ASTRONOMIC
-    round: 2
-    unlock_global: -1
-    unlock_local: 5
-- model: puzzles.Puzzle
-  pk: 21
-  fields:
+    name: Town Tours
+    slug: town-tours
+    body_template: town-tours.html
+    answer: LAUNDERINGSALESMAN
+    round: 1
     order: 10
-    name: The Curious Cave
-    slug: the-curious-cave
-    body_template: the-curious-cave.html
-    answer: FLINT KNIFE
-    round: 2
-    unlock_global: -1
-    unlock_local: 6
-- model: puzzles.Puzzle
-  pk: 22
-  fields:
-    order: 11
-    name: Rolling Boulders
-    slug: rolling-boulders
-    body_template: rolling-boulders.html
-    answer: THROW A TEMPLE TANTRUM
-    is_meta: True
-    round: 2
-    unlock_global: -1
-    unlock_local: 7
-
-- model: puzzles.Puzzle
-  pk: 23
-  fields:
-    order: 1
-    name: Help Me, ChatOMG!
-    slug: help-me-chatomg
-    body_template: help-me-chatomg.html
-    answer: TERM
-    round: 3
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 24
-  fields:
-    order: 2
-    name: Take The Initiative
-    slug: take-the-initiative
-    body_template: take-the-initiative.html
-    answer: PARTY
-    round: 3
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 25
-  fields:
-    order: 3
-    name: Missed Connections
-    slug: missed-connections
-    body_template: missed-connections.html
-    answer: MY BELOVED
-    round: 3
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 26
-  fields:
-    order: 4
-    name: Crack Team
-    slug: crack-team
-    body_template: crack-team.html
-    answer: RIPPER
-    round: 3
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 27
-  fields:
-    order: 5
-    name: Let's Just Get Takeout
-    slug: lets-just-get-takeout
-    body_template: lets-just-get-takeout.html
-    answer: JOB
-    round: 3
-    unlock_global: -1
-    unlock_local: 1
-- model: puzzles.Puzzle
-  pk: 28
-  fields:
-    order: 6
-    name: FirewallStreetBets
-    slug: firewallstreetbets
-    body_template: firewallstreetbets.html
-    answer: DOUBLE
-    round: 3
-    unlock_global: -1
-    unlock_local: 2
-- model: puzzles.Puzzle
-  pk: 29
-  fields:
-    order: 7
-    name: Weather Conditions
-    slug: weather-conditions
-    body_template: weather-conditions.html
-    answer: DULL
-    round: 3
-    unlock_global: -1
-    unlock_local: 3
-- model: puzzles.Puzzle
-  pk: 30
-  fields:
-    order: 8
-    name: Keeping up with the Keychain
-    slug: keeping-up-with-the-keychain
-    body_template: keeping-up-with-the-keychain.html
-    answer: NEXUS
-    round: 3
-    unlock_global: -1
-    unlock_local: 4
-- model: puzzles.Puzzle
-  pk: 31
-  fields:
-    order: 9
-    name: Face the Music
-    slug: face-the-music
-    body_template: face-the-music.html
-    answer: JEWEL
-    round: 3
-    unlock_global: -1
-    unlock_local: 5
-- model: puzzles.Puzzle
-  pk: 32
-  fields:
-    order: 10
-    name: The Marvelous MsMonster
-    slug: the-marvelous-ms-monster
-    body_template: the-marvelous-ms-monster.html
-    answer: VOYAGERS
-    round: 3
-    unlock_global: -1
-    unlock_local: 6
-- model: puzzles.Puzzle
-  pk: 33
-  fields:
-    order: 11
-    name: The Lantern Digital
-    slug: the-lantern-digital
-    body_template: the-lantern-digital.html
-    answer: TWIDDLE YOUR THUMB DRIVE
-    is_meta: True
-    round: 3
+    is_meta: true
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 8
-
-- model: puzzles.Puzzle
-  pk: 34
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 45
   fields:
+    name: Beasts Unleashed
+    slug: beasts-unleashed
+    body_template: beasts-unleashed.html
+    answer: TARANTULA
+    round: 2
     order: 1
-    name: The Blueprint
-    slug: the-blueprint
-    body_template: the-blueprint.html
-    answer: WITH A MORTAL FRENEMY
-    round: 4
-    unlock_global: -2
-    unlock_local: -1
-- model: puzzles.Puzzle
-  pk: 35
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 0
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 46
   fields:
+    name: Unorthodox Orthography
+    slug: orthography
+    body_template: orthography.html
+    answer: TBD
+    round: 2
     order: 2
-    name: The Secret Blueprint
-    slug: the-secret-blueprint
-    body_template: the-secret-blueprint.html
-    answer: REKINDLE AN OLD FLAME
-    is_meta: True
-    round: 4
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 0
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 47
+  fields:
+    name: No Way Establishment
+    slug: no-way
+    body_template: no-way.html
+    answer: TBD
+    round: 2
+    order: 3
+    is_meta: false
+    unlock_hours: -1
     unlock_global: -1
     unlock_local: 1
-
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 48
+  fields:
+    name: Brace for Impact
+    slug: brace
+    body_template: brace.html
+    answer: INDONESIA
+    round: 2
+    order: 4
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 2
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 49
+  fields:
+    name: 'Suns Out: Time to Unplug'
+    slug: unplug
+    body_template: unplug.html
+    answer: TELEPORTS
+    round: 2
+    order: 5
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 3
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 50
+  fields:
+    name: Point of Sale
+    slug: pos
+    body_template: pos.html
+    answer: TBD
+    round: 2
+    order: 6
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 4
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 51
+  fields:
+    name: Tea Store of Futility
+    slug: futility
+    body_template: futility.html
+    answer: REPAYMENT
+    round: 2
+    order: 7
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 5
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 52
+  fields:
+    name: So V Think... Nope!
+    slug: so-v-think
+    body_template: so-v-think.html
+    answer: RIGHT HERE
+    round: 2
+    order: 8
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 6
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 53
+  fields:
+    name: Dead-end Strategists
+    slug: dead-end
+    body_template: dead-end.html
+    answer: OLYMPIANS
+    round: 2
+    order: 9
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 7
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 54
+  fields:
+    name: Tearing You Down
+    slug: tearing
+    body_template: tearing.html
+    answer: ERRATASINTHEFAMILY
+    round: 2
+    order: 10
+    is_meta: true
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 8
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 55
+  fields:
+    name: He'll Make You an Offer You Can't Understand
+    slug: offer
+    body_template: offer.html
+    answer: DUCATS
+    round: 3
+    order: 1
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: 0
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 56
+  fields:
+    name: Luca Brasi Sleeps with the Fishes
+    slug: fishes
+    body_template: fishes.html
+    answer: SAILOR
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 57
+  fields:
+    name: Say Hello to My Little Friend
+    slug: hello
+    body_template: hello.html
+    answer: PRINCESSLUNA
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 58
+  fields:
+    name: Take the Gun, Leave the Cannoli???
+    slug: cannoli
+    body_template: cannoli.html
+    answer: ROADIE
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 59
+  fields:
+    name: The Gaming Commission Would Never Give Me a License
+    slug: license
+    body_template: license.html
+    answer: THEVENETIAN
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 60
+  fields:
+    name: Top Of The World Ma
+    slug: top
+    body_template: top.html
+    answer: LURCH
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 61
+  fields:
+    name: You Come At The King You Best Not Miss
+    slug: king
+    body_template: king.html
+    answer: YEAHNOTOM
+    round: 3
+    order: 0
+    is_meta: false
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 62
+  fields:
+    name: Meta 3 Part 1
+    slug: meta-3-1
+    body_template: meta-3-1.html
+    answer: BLACKMAILED
+    round: 3
+    order: 0
+    is_meta: true
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.puzzle
+  pk: 63
+  fields:
+    name: Meta 3 Part 2
+    slug: meta-3-2
+    body_template: meta-3-2.html
+    answer: KYLE BE BACK
+    round: 3
+    order: 0
+    is_meta: true
+    unlock_hours: -1
+    unlock_global: -1
+    unlock_local: -1
+    emoji: ':question:'
+- model: puzzles.team
+  pk: 1
+  fields:
+    user: 1
+    team_name: jchaffer
+    creation_time: 2025-03-23 13:57:02.865521+00:00
+    start_offset: 00:00:00
+    allow_time_unlocks: true
+    total_hints_awarded: 0
+    total_free_answers_awarded: 0
+    last_solve_time: null
+    is_prerelease_testsolver: true
+    is_hidden: true
+- model: puzzles.team
+  pk: 2
+  fields:
+    user: 2
+    team_name: test
+    creation_time: 2026-05-13 14:02:30.594652+00:00
+    start_offset: 00:00:00
+    allow_time_unlocks: true
+    total_hints_awarded: 0
+    total_free_answers_awarded: 0
+    last_solve_time: null
+    is_prerelease_testsolver: false
+    is_hidden: false
+- model: puzzles.puzzleunlock
+  pk: 1
+  fields:
+    team: 2
+    puzzle: 36
+    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
+    view_datetime: null
+- model: puzzles.puzzleunlock
+  pk: 2
+  fields:
+    team: 2
+    puzzle: 1
+    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
+    view_datetime: 2026-05-13 14:02:56.172229+00:00
+- model: puzzles.puzzleunlock
+  pk: 3
+  fields:
+    team: 2
+    puzzle: 45
+    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
+    view_datetime: null
+- model: puzzles.puzzleunlock
+  pk: 4
+  fields:
+    team: 2
+    puzzle: 46
+    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
+    view_datetime: null
+- model: puzzles.puzzleunlock
+  pk: 5
+  fields:
+    team: 2
+    puzzle: 55
+    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
+    view_datetime: null
+- model: puzzles.puzzlemessage
+  pk: 1
+  fields:
+    puzzle: 1
+    guess: TOADGNATLIONNAG
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 2
+  fields:
+    puzzle: 37
+    guess: USE SILENT LETTERS
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 3
+  fields:
+    puzzle: 41
+    guess: STARSAREABOVEANSWERLETTERS
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 4
+  fields:
+    puzzle: 42
+    guess: EYESEABEEOWE
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 5
+  fields:
+    puzzle: 45
+    guess: STRIPESANDSPOTSAREDASHANDDOT
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 6
+  fields:
+    puzzle: 49
+    guess: OFFSETBYUTC
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 7
+  fields:
+    puzzle: 56
+    guess: APPLE
+    response: That's an intermediate answer. Keep going!
+- model: puzzles.puzzlemessage
+  pk: 8
+  fields:
+    puzzle: 56
+    guess: ROSES
+    response: That's an intermediate answer. Keep going!
+- model: puzzles.puzzlemessage
+  pk: 9
+  fields:
+    puzzle: 56
+    guess: JACKDEMPSEY
+    response: "Part 2: Weigh the Odds\r\n\r\nYou examine the regularly-available table
+      of data:\r\n227:21 (Baer);\r\n799:20;\r\n16:1;\r\n826:13;\r\n14:1;\r\n12:1;\r\n12:1;\r\na
+      bit less than 209:1 (Tunney)\r\n\r\nCalculate, order, and reference the data
+      to determine the prize"
+- model: puzzles.puzzlemessage
+  pk: 10
+  fields:
+    puzzle: 56
+    guess: DEMPSEY
+    response: Almost...
+- model: puzzles.puzzlemessage
+  pk: 11
+  fields:
+    puzzle: 56
+    guess: DIAMOND
+    response: That's an intermediate answer. Keep going!
+- model: puzzles.puzzlemessage
+  pk: 12
+  fields:
+    puzzle: 56
+    guess: DOG
+    response: That's an intermediate answer. Keep going!
+- model: puzzles.puzzlemessage
+  pk: 13
+  fields:
+    puzzle: 57
+    guess: TYBEANIES
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 14
+  fields:
+    puzzle: 57
+    guess: '41183'
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 15
+  fields:
+    puzzle: 60
+    guess: VIEW TURFS FROM TOWERS ON MASYU
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 16
+  fields:
+    puzzle: 61
+    guess: ID3V1
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 17
+  fields:
+    puzzle: 61
+    guess: GOUSEISRC
+    response: Keep going!
+- model: puzzles.puzzlemessage
+  pk: 18
+  fields:
+    puzzle: 61
+    guess: MATCH SIDE 2 SONGS TO INDEX THE PUZZLE TITLE WORDS YOUNG BEFORE YOU
+    response: Keep going!
