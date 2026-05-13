@@ -4,14 +4,94 @@
 
 {% block puzzle-body-html %}
 
+<style>
+    .before, .after {
+        list-style-type: none;
+        padding-left: 0;
+        display: inline-block;
+    }
+
+    .before {
+        width: 39%;
+    }
+
+    .after {
+        width: 49%;
+    }
+
+    .before li, .after li {
+        margin-bottom: 0;
+        list-style-type: none;
+        text-align: left;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .blanks p {
+        font-size: 30px;
+        text-align: left;
+    }
+</style>
+
 <div class="window">
     <div class="name">Flavor Text</div>
-    <p class="flavortext"></p>
+    <p class="flavortext">You enter what appears to be a dance studio. It is currently deserted, so you pick up a brochure that reads as follows:</p>
 </div>
 
 <div class="window">
-    <div class="name"></div>
-    <p></p>
+    <p>In this class you’ll be learning line dances. You and some partners will line up, and execute one of the following dance moves:</p>
+
+    <p>The Shuffle: You move to a different position in the line</p>
+    <p>The Getaway: You get out of the line</p>
+    <p>The Switcheroo: You are replaced by a wrestler and 80’s TV action star</p>
+
+    <p>Here are what the lines should look like before and after the dance moves. Sorry about the ordering; you’ll have to match them up.</p>
+
+    <ul class="before">
+        <li><b>Before:</b></li>
+        <li>Comes after Lin at the theater</li>
+        <li>Exterior often seen before space</li>
+        <li>Falcon-headed Egyptian god</li>
+        <li>Irish province</li>
+        <li>Lazily sitting around (e.g. on chair)</li>
+        <li>Parents’ sisters</li>
+        <li>Planet</li>
+        <li>Slick or smooth (like these moves!)</li>
+        <li>Subtract</li>
+        <li>Tied up, or like a book</li>
+        <li>Worst part or chief impact of an event</li>
+    </ul>
+
+    <ul class="after">
+        <li><b>After:</b></li>
+        <li>Charred</li>
+        <li>Cute sea mammal</li>
+        <li>Financial instrument of interest?</li>
+        <li>Fireplace shelf</li>
+        <li>Flues or pipes</li>
+        <li>Preserve or bank</li>
+        <li>Stamps out breath fresheners?</li>
+        <li>The shine or gloss of something (e.g. these moves!)</li>
+        <li>Unwelcome picnic guests</li>
+        <li>Yearning or craving</li>
+        <li>You often see faces with twelve</li>
+    </ul>
+
+    <p>Think you can dance? Sounds like you can!</p>
+
+    <div class="blanks">
+        <p>_ _ _ _ _    ->  [_] _ _ _</p>
+        <p>_ _ _ _ [_]    ->  _ _ _ _</p>
+        <p>_ _ _ _ _    ->  _ _ [_] _ _</p>
+        <p>_ _ _ _ _    ->  _ [_] _ _ _</p>
+        <p>_ _ _ _ _ [_] _ _  ->  _ _ _ _ _ _ _</p>
+        <p>_ _ _ _ _ _   ->  _ _ _ [_] _ _</p>
+        <p>[_] _ _ _ _   ->  _ _ _ _ _</p>
+        <p>[_] _ _ _ _   ->  _ _ _ _ _</p>
+        <p>_ _ _ _ _    ->  _ _ [_] _</p>
+        <p>_ _ _ _ _ _   ->  _ _ _ _ [_] _</p>
+        <p>_ _ _ _ [_]    ->  _ _ _ _ _</p>
+    </div>
 </div>
 
 <a href="/round/the-front">

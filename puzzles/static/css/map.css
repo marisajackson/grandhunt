@@ -1,465 +1,467 @@
 /* debug: visualize the map_item bounding div */
 .map_item {
-	/*
+  /*
 	border: 5px solid red;
 	*/
 }
 
 .map_item .hide {
-	visibility: hidden;
+  visibility: hidden;
 
-	color: black;
-	background-color: white;
-	opacity: 0.8;
-	text-align: center;
-	padding: 5px 5px;
-	border-radius: 6px;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
 
-	position: relative;
-	top: 20%;
+  position: relative;
+  top: 20%;
 }
 
 .map_item:hover .hide {
-	visibility: visible;
+  visibility: visible;
 }
 
 .map_item:hover .item_img {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .abs-z1 {
-	position: absolute;
-	z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 .abs-z3 {
-	position: absolute;
-	z-index: 3;
+  position: absolute;
+  z-index: 3;
 }
 
 .abs-z5 {
-	position: absolute;
-	z-index: 5;
+  position: absolute;
+  z-index: 5;
 }
-
 
 /* Round 1 icon positioning */
 .reading-the-room {
-	top: 19%;
-	left: 57%;
-	height: 11%;
-	width: 11%;
+  top: 19%;
+  left: 57%;
+  height: 11%;
+  width: 11%;
 }
 
 .a-sour-experience {
-	top: 18%;
-	left: 72%;
-	height: 10%;
-	width: 10%;
+  top: 18%;
+  left: 72%;
+  height: 10%;
+  width: 10%;
 }
 
-.crossword-puzzle-no-1-in-black-and-white{
-	top: 14%;
-	left: 83%;
-	height: 11%;
-	width: 11%;
+.crossword-puzzle-no-1-in-black-and-white {
+  top: 14%;
+  left: 83%;
+  height: 11%;
+  width: 11%;
 }
 
-.tickets-please{
-	top: 20%;
-	left: 41%;
-	height: 11%;
-	width: 11%;
+.tickets-please {
+  top: 20%;
+  left: 41%;
+  height: 11%;
+  width: 11%;
 }
 
-.pinching-pig-pennies{
-	top: 37%;
-	left: 37.5%;
-	height: 13%;
-	width: 13%;
+.pinching-pig-pennies {
+  top: 37%;
+  left: 37.5%;
+  height: 13%;
+  width: 13%;
 }
 
-.have-your-say{
-	top: 61%;
-	left: 35%;
-	height: 14%;
-	width: 14%;
+.have-your-say {
+  top: 61%;
+  left: 35%;
+  height: 14%;
+  width: 14%;
 }
 
 .under-pollock-and-key {
-	top: 36%;
-	left: 51.5%;
-	height: 20%;
-	width: 20%;
+  top: 36%;
+  left: 51.5%;
+  height: 20%;
+  width: 20%;
 }
 
 .choosy-collectors {
-	top: 57%;
-	left: 56.5%;
-	height: 9.5%;
-	width: 9.5%;
+  top: 57%;
+  left: 56.5%;
+  height: 9.5%;
+  width: 9.5%;
 }
 
 .meet-the-museum-staff {
-	top: 35%;
-	left: 76%;
-	height: 13%;
-	width: 13%;
+  top: 35%;
+  left: 76%;
+  height: 13%;
+  width: 13%;
 }
 
 .reconnaissance {
-	top: 52%;
-	left: 76%;
-	height: 13%;
-	width: 13%;
+  top: 52%;
+  left: 76%;
+  height: 13%;
+  width: 13%;
 }
 
 .in-the-jungle {
-	top: 69%;
-	left: 73%;
-	height: 8%;
-	width: 8%;
+  top: 69%;
+  left: 73%;
+  height: 8%;
+  width: 8%;
 }
 
 /* Round 2 icon positioning */
 .blocks {
-	top: 63%;
-	left: 31.5%;
-	height: 10%;
-	width: 10%;
+  top: 63%;
+  left: 31.5%;
+  height: 10%;
+  width: 10%;
 }
 
 .burial-flags {
-	top: 45%;
-	left: 36%;
-	height: 10%;
-	width: 10%;
+  top: 45%;
+  left: 36%;
+  height: 10%;
+  width: 10%;
 }
 
 .fearsome-foes {
-	top: 75%;
-	left: 9.5%;
-	height: 11%;
-	width: 11%;
+  top: 75%;
+  left: 9.5%;
+  height: 11%;
+  width: 11%;
 }
 
 .meandering-streams {
-	top: 45.5%;
-	left: 80.5%;
-	height: 11%;
-	width: 11%;
+  top: 45.5%;
+  left: 80.5%;
+  height: 11%;
+  width: 11%;
 }
 
 .rolling-boulders {
-	top: 3%;
-	left: 53.5%;
-	height: 23%;
-	width: 23%;
+  top: 3%;
+  left: 53.5%;
+  height: 23%;
+  width: 23%;
 }
 
 .snakes-why-did-it-have-to-be-snakes {
-	top: 49%;
-	left: 9.5%;
-	height: 11%;
-	width: 11%;
+  top: 49%;
+  left: 9.5%;
+  height: 11%;
+  width: 11%;
 }
 
 .sound-and-movement {
-	top: 45%;
-	left: 58%;
-	height: 9.5%;
-	width: 9.5%;
+  top: 45%;
+  left: 58%;
+  height: 9.5%;
+  width: 9.5%;
 }
 
 .star-chart {
-	top: 80%;
-	left: 32.5%;
-	height: 13%;
-	width: 13%;
+  top: 80%;
+  left: 32.5%;
+  height: 13%;
+  width: 13%;
 }
 
 .sun-moon-and-stars {
-	top: 61.5%;
-	left: 81%;
-	height: 11%;
-	width: 11%;
+  top: 61.5%;
+  left: 81%;
+  height: 11%;
+  width: 11%;
 }
 
 .the-curious-cave {
-	top: 80.5%;
-	left: 58.5%;
-	height: 9.5%;
-	width: 9.5%;
+  top: 80.5%;
+  left: 58.5%;
+  height: 9.5%;
+  width: 9.5%;
 }
 
 .the-river {
-	top: 65%;
-	left: 58%;
-	height: 10.5%;
-	width: 10.5%;
+  top: 65%;
+  left: 58%;
+  height: 10.5%;
+  width: 10.5%;
 }
 
 /* Round 3 icon positioning */
 .help-me-chatomg {
-	height: 15%;
-	top: 12%;
-	left: 12%;
-	width: 15%;
+  height: 15%;
+  top: 12%;
+  left: 12%;
+  width: 15%;
 }
 
 .take-the-initiative {
-	height: 15%;
-	top: 12%;
-	left: 29%;
-	width: 15%;
+  height: 15%;
+  top: 12%;
+  left: 29%;
+  width: 15%;
 }
 
 .missed-connections {
-	height: 15%;
-	top: 12%;
-	left: 46%;
-	width: 15%;
+  height: 15%;
+  top: 12%;
+  left: 46%;
+  width: 15%;
 }
 
 .crack-team {
-	height: 15%;
-	top: 28%;
-	left: 12%;
-	width: 15%;
+  height: 15%;
+  top: 28%;
+  left: 12%;
+  width: 15%;
 }
 
 .lets-just-get-takeout {
-	height: 15%;
-	top: 28%;
-	left: 29%;
-	width: 15%;
+  height: 15%;
+  top: 28%;
+  left: 29%;
+  width: 15%;
 }
 
 .firewallstreetbets {
-	height: 15%;
-	top: 28%;
-	left: 46%;
-	width: 15%;
+  height: 15%;
+  top: 28%;
+  left: 46%;
+  width: 15%;
 }
 
 .weather-conditions {
-	height: 15%;
-	top: 43%;
-	left: 12%;
-	width: 15%;
+  height: 15%;
+  top: 43%;
+  left: 12%;
+  width: 15%;
 }
 
 .keeping-up-with-the-keychain {
-	height: 15%;
-	top: 43%;
-	left: 29%;
-	width: 15%;
+  height: 15%;
+  top: 43%;
+  left: 29%;
+  width: 15%;
 }
 
 .face-the-music {
-	height: 15%;
-	top: 43%;
-	left: 46%;
-	width: 15%;
+  height: 15%;
+  top: 43%;
+  left: 46%;
+  width: 15%;
 }
 
 .the-marvelous-ms-monster {
-	height: 13%;
-	top: 58%;
-	left: 20%;
-	width: 13%;
+  height: 13%;
+  top: 58%;
+  left: 20%;
+  width: 13%;
 }
 
 .the-lantern-digital {
-	height: 16%;
-	top: 56%;
-	left: 37%;
-	width: 16%;
+  height: 16%;
+  top: 56%;
+  left: 37%;
+  width: 16%;
 }
 /* Common round styling */
 
 .flavortext {
-	font-style: italic;
+  font-style: italic;
 }
 
 .window img {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 /* Round 1-specifc styling */
 .r1 {
-	--page-bg-rgb: var(--white-color);
-    --accent-rgb: 144, 42, 62;
-	--heading-text-color: var(--accent-color);
-	--link-text-color: var(--accent-color);
-	--tray-text-color: var(--accent-color);
-	--tray-bg-color: var(--white-color);
+  --page-bg-rgb: var(--white-color);
+  --accent-rgb: 144, 42, 62;
+  --heading-text-color: var(--accent-color);
+  --link-text-color: var(--accent-color);
+  --tray-text-color: var(--accent-color);
+  --tray-bg-color: var(--white-color);
 }
 
 .r1 .puzzle-main {
-	color: black
+  color: black;
 }
 
-.r1 body, .r1 .shortcuts-label, .r1 .current-stat, .r1 td {
-	color: var(--accent-color);
+.r1 body,
+.r1 .shortcuts-label,
+.r1 .current-stat,
+.r1 td {
+  color: var(--accent-color);
 }
 
 .r1 .window {
-	position: relative;
-	/* moved to base.html so the value can use a Django template
+  position: relative;
+  /* moved to base.html so the value can use a Django template
 	border-image: url("/static/map_resources/r1/frame.png");
 	*/
-	border-image-slice: 15.5% 20%;
-	border-image-repeat: round;
-	border-image-width: 25px 40px;
-	border-image-outset: 7px;
-	background-color: var(--white-color);
-    padding: 25px 25px 30px 25px;
-    margin: 0px 0px 30px 0px;
-	font-size: 1.1em;
+  border-image-slice: 15.5% 20%;
+  border-image-repeat: round;
+  border-image-width: 25px 40px;
+  border-image-outset: 7px;
+  background-color: var(--white-color);
+  padding: 25px 25px 30px 25px;
+  margin: 0px 0px 30px 0px;
+  font-size: 1.1em;
 }
 
 .r1 .window .name {
-	font-family: Apple Chancery, cursive;
-	background-color: rgb(var(--accent-rgb));
-	border-radius: 10px;
-	border: 3px solid rgb(169, 179, 95);
-	position: absolute;
-	max-width: fit-content;
-	left: 0;
-  	right: 0;
-  	margin: auto;
-	padding: 6px;
-	bottom: -15px;
-	color: var(--white-color);
+  font-family:
+    Apple Chancery,
+    cursive;
+  background-color: rgb(var(--accent-rgb));
+  border-radius: 10px;
+  border: 3px solid rgb(169, 179, 95);
+  position: absolute;
+  max-width: fit-content;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 6px;
+  bottom: -15px;
+  color: var(--white-color);
 }
 
 .r1 .portrait {
-    width: 45%;
-    display: inline-table;
+  width: 45%;
+  display: inline-table;
 }
 
 .r1 .endnote {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r1/footer.png");
 	*/
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 100%;
-	height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 50px;
 }
 
 /* Round 2-specifc styling */
 .r2 {
-	--page-bg-rgb: 65, 94, 96;
-    --accent-rgb: 51, 48, 55;
+  --page-bg-rgb: 65, 94, 96;
+  --accent-rgb: 51, 48, 55;
 }
 
 .r2 .puzzle-main {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/background-tile.png");
 	*/
-	background-repeat: repeat;
-	background-size: 1000px 2000px;
-	font-family: monospace;
-    color: var(--white-color);
+  background-repeat: repeat;
+  background-size: 1000px 2000px;
+  font-family: monospace;
+  color: var(--white-color);
 }
 
 .r2 .text {
-    margin: 0px 60px 20px 60px;
-	font-size: 1.1em;
-    text-align: left;
+  margin: 0px 60px 20px 60px;
+  font-size: 1.1em;
+  text-align: left;
 }
 
 .r2 .frame-blue {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	border-image: url("/static/map_resources/r2/frame-empty.png");
 	*/
-	border-image-slice: 95 65 70 80;
-	border-image-repeat: round;
-	border-image-width: 3rem;
-    padding: 80px;
+  border-image-slice: 95 65 70 80;
+  border-image-repeat: round;
+  border-image-width: 3rem;
+  padding: 80px;
 }
 
 .r2 .crack1 {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/crack1.png");
 	*/
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: calc(100% - 50px) calc(100% - 40px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(100% - 50px) calc(100% - 40px);
 }
 
 .r2 .full {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/full.png");
 	*/
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: calc(100% - 50px) calc(100% - 40px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(100% - 50px) calc(100% - 40px);
 }
 
 /* Round 3-specifc styling */
 .r3 {
-	--page-bg-rgb: 26, 25, 19;
-    --accent-rgb: 97, 181, 157;
+  --page-bg-rgb: 26, 25, 19;
+  --accent-rgb: 97, 181, 157;
 }
 
 .r3 .puzzle-main {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r3/background-tile.png");
 	*/
-	background-repeat: repeat;
-	background-size: 15px 15px;
-	font-family: monospace;
-	color: black;
+  background-repeat: repeat;
+  background-size: 15px 15px;
+  font-family: monospace;
+  color: black;
 }
 
 .r3 .puzzle-main h4 {
-	color: black;
+  color: black;
 }
 
 .r3 .window {
-	/* moved to base.html so the value can use a Django template
+  /* moved to base.html so the value can use a Django template
     border-image: url("/static/map_resources/r3/window.png");
 	*/
-	border-image-slice:  120 60 60 40;
-	border-image-repeat: round;
-	border-image-width: 37px 15px 15px 10px;
-	border-image-outset: 7px;
-	background-color: var(--white-color);
-    padding: 40px 19px 15px 14px;
-    margin: 0px 0px 20px 0px;
-	font-size: 1.1em;
+  border-image-slice: 120 60 60 40;
+  border-image-repeat: round;
+  border-image-width: 37px 15px 15px 10px;
+  border-image-outset: 7px;
+  background-color: var(--white-color);
+  padding: 40px 19px 15px 14px;
+  margin: 0px 0px 20px 0px;
+  font-size: 1.1em;
 }
 
 .r3 .window .name {
-	font-weight: bold;
-	color: #444444;
-	position: relative;
-	top: -40px;
-	height: 0px
+  font-weight: bold;
+  color: #444444;
+  position: relative;
+  top: -40px;
+  height: 0px;
 }
 
 .r3 .window a {
-	--link-text-color: var(--accent-color);
+  --link-text-color: var(--accent-color);
 }
 
 /* Round 4-specifc styling */
 .r4 .puzzle-main {
-	color: var(--white-color);
-	text-align: left;
+  color: var(--white-color);
+  text-align: left;
 }
 
 .r4 .emojis {
-    font-size: 1.2em;
-    line-height: 2em;
-    font-family: monospace;
-    color: rgb(253, 98, 255);
-	word-break: break-word;
-    overflow-wrap: anywhere;
+  font-size: 1.2em;
+  line-height: 2em;
+  font-family: monospace;
+  color: rgb(253, 98, 255);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
-
-

@@ -4,14 +4,41 @@
 
 {% block puzzle-body-html %}
 
+<style>
+    .addresses, .map {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .addresses {
+        text-align: left;
+        font-size: 18px;
+    }
+</style>
+
 <div class="window">
     <div class="name">Flavor Text</div>
-    <p class="flavortext"></p>
+    <p class="flavortext">Gramps wants a private meeting with you. He's given you a list of addresses and an unlabelled map. Before he meets you he wants you to collect two things from each business location. You'd better follow his directions carefully:</p>
 </div>
 
 <div class="window">
-    <div class="name"></div>
-    <p></p>
+
+    <div class="addresses">
+        <h5>Business Addresses:</h5>
+        Beast On A Leash		40502 Bipedal Street<br>
+        Crowes Tavern		10607 Ethanol Street<br>
+        Endpoint Strategists		0503 Growth Street<br>
+        Growing Grin Orthodontics		20408 Incisor Street<br>
+        So U Think U Can Dance		31107 Nimble Street<br>
+        Suns Out Holidays		10103 Baggage Street<br>
+        Tea Store Of The Future		20804 Oolong Street<br>
+        The Knowhow Establishment 		21606 Author Street<br>
+        Unorthodox Photography		10102 Lens Street<br>
+    </div>
+    <div class="map">
+        <img src="{% static 'grand_front/puzzle_resources/r1/town.png' %}" />
+    </div>
 </div>
 
 <a href="/round/the-front">
