@@ -28,21 +28,21 @@ INITIAL_STATS_AVAILABLE = False
 SURVEYS_AVAILABLE = True
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
-    year=2025,
+    year=2026,
     month=1,
     day=9,
     hour=15,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
-    year=2025,
+    year=2027,
     month=1,
     day=20,
     hour=15,
     minute=0,
 ))
 HUNT_CLOSE_TIME = timezone.make_aware(datetime.datetime(
-    year=2025,
+    year=2028,
     month=1,
     day=20,
     hour=15,

@@ -3,79 +3,19 @@
 {% block html_class %}r2{% endblock %}
 
 {% block puzzle-body-html %}
-<style>
-td {
-	border: 2px solid black;
-	text-align: center;
-	padding: 0px;
-	height: 80px;
-}
 
-table tr td.thick {
-	border: 5px solid black;
-}
-
-/* override css from parent */
-tr:last-child td {
-	border-bottom: 2px solid black;
-}
-table {
-	margin-bottom: 0px;
-}
-
-.r2 .grid {
-	padding: 40px;
-	font-size: 0.8em;
-}
-
-</style>
-
-<img style="max-width: 100%" src={% static 'puzzle_resources/r2/p1/heads.png' %}>
-<img style="max-width: 100%; margin-bottom: 40px" src={% static 'map_resources/r2/dotted-line.png' %}>
-
-<div class="text">
-<p><a href=https://docs.google.com/spreadsheets/d/15N6zEwkiUxVFQhDrQ7_DewgzJOP-I9dKcUktdEoalnI/edit?usp=sharing>Copyable Spreadsheet</a></p>
-You enter the chamber and, to your horror, see a bunch of snakes slithering around! Carefully, you trace a
-path around them. But then, some of the snakes crawl off towards their nest (as shown in second illustration below). You figure out the proper places
-in the nest to examine, and find... well, à quoi t'attendais-tu?
+<div class="window">
+	<div class="name">Flavor Text</div>
+	<p class="flavortext"></p>
 </div>
 
-<div class="text" style="text-align:center; font-weight: bold">
-Snakes on the Floor
-</div>
-<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p1/snakes.png' %}>
-
-<div class="text" style="text-align:center; font-weight: bold">
-<br />
-The Snake Nest
-</div>
-<div class="text frame-blue full grid">
-<table style="table-layout: fixed; width: 100%">
-	<tr>
-		<td>18</td><td>11</td><td>22</td><td>17</td><td>20</td><td>25</td><td>19</td>
-	</tr>
-	<tr>
-		<td>26</td><td class="thick"> COPPER </td><td class="thick">SPITTING </td><td class="thick">KNIFE </td><td class="thick">MASKED </td><td class="thick">FANG </td><td>12</td>
-	</tr>
-	<tr>
-		<td>15</td><td class="thick"> DEADLY </td><td class="thick">BELLY </td><td class="thick">CREEPING </td><td class="thick">IRON </td><td class="thick">KING </td><td>24</td>
-	</tr>
-	<tr>
-		<td>14</td><td class="thick"> BLADED </td><td class="thick">RATTLER </td><td class="thick">SILVER </td><td class="thick">PYTHON </td><td class="thick">TAIL </td><td>16</td>
-	</tr>
-	<tr>
-		<td>23</td><td class="thick"> RED </td><td class="thick">SPEAR </td><td class="thick">VIPER </td><td class="thick">HOODED </td><td class="thick">VENOM </td><td>21</td>
-	</tr>
-	<tr>
-		<td>10 </td><td class="thick">MOUTHED </td><td class="thick">SILENT </td><td class="thick">SWORD </td><td class="thick">HEAD </td><td class="thick">COTTON </td><td>13</td>
-	</tr>
-</table>
+<div class="window">
+	<div class="name"></div>
+	<p></p>
 </div>
 
-<div class="text" style="margin:60px">
-Answer: _ _ _&nbsp;&nbsp;_ _&nbsp;&nbsp;_ _ _ _ _
-</div>
+<a href="/round/the-investigation">
+	<div class="endnote"></div>
+</a>
 
-<img style="max-width: 100%" src={% static 'map_resources/r2/dotted-line.png' %}>
-<img style="max-width: 100%" src={% static 'map_resources/r2/arrows.png' %}>
 {% endblock %}
