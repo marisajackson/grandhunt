@@ -4,14 +4,54 @@
 
 {% block puzzle-body-html %}
 
+<style>
+    ul.clues {
+        list-style-type: none;
+        padding-left: 0;
+        max-width: 35%;
+    }
+
+    ul.clues li {
+        margin-bottom: 0;
+        list-style-type: none;
+        text-align: left;
+        border-bottom: 1px solid #000;
+    }
+</style>
+
 <div class="window">
     <div class="name">Flavor Text</div>
-    <p class="flavortext"></p>
+    <p class="flavortext">This store is the city's most sought-after destination for all your vacation needs. Every kind of luggage is available: suitcases, duffel bags, and even portmanteaus!
+    <br>
+    Though the variety on display can be a bit exhausting; some customers take a look and cancel their travel plans altogether.</p>
 </div>
 
 <div class="window">
-    <div class="name"></div>
-    <p></p>
+    <div style="display: flex; justify-content: space-around; align-items: center;">
+        <img src="{% static 'grand_front/puzzle_resources/r1/suns_out.png' %}" style="max-width: 65%; height: auto;" />
+        <ul class="clues">
+            <li>Sporty</li>
+            <li>First meal</li>
+            <li>Journalistic movie</li>
+            <li>Waterfowl</li>
+            <li>Current-ly exciting?</li>
+            <li>Carry out a death sentence</li>
+            <li>Surface-level clouds</li>
+            <li>Tined implement</li>
+            <li>Barnyard egg-layer</li>
+            <li>Sharp frozen water</li>
+            <li>State of rising prices</li>
+            <li>Relaxation</li>
+            <li>Round candy on a stick</li>
+            <li>Second meal</li>
+            <li>Make fun of</li>
+            <li>Gorgon or Gaga groupie</li>
+            <li>Location to store things in clothing</li>
+            <li>Make smaller</li>
+            <li>Airborne result of fire</li>
+            <li>Utensil with a bowl</li>
+            <li>Thanksgiving animal</li>
+        </ul>
 </div>
 
 <a href="/round/the-front">
