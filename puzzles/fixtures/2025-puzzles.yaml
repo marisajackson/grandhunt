@@ -1,21 +1,21 @@
 - model: puzzles.round
   pk: 1
   fields:
-    name: 'Chapter 1: The Front'
+    name: "Chapter 1: The Front"
     slug: the-front
     meta: 44
     order: 1
 - model: puzzles.round
   pk: 2
   fields:
-    name: 'Chapter 2: The Investigation'
+    name: "Chapter 2: The Investigation"
     slug: the-investigation
     meta: null
     order: 2
 - model: puzzles.round
   pk: 3
   fields:
-    name: 'Chapter 3: The Family'
+    name: "Chapter 3: The Family"
     slug: the-family
     meta: null
     order: 3
@@ -29,7 +29,7 @@
 - model: puzzles.round
   pk: 5
   fields:
-    name: 'Chapter 4: The Notebook'
+    name: "Chapter 4: The Notebook"
     slug: the-notebook
     meta: null
     order: 4
@@ -46,7 +46,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 0
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 36
   fields:
@@ -60,7 +60,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 0
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 37
   fields:
@@ -74,7 +74,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 2
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 38
   fields:
@@ -88,7 +88,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 39
   fields:
@@ -102,7 +102,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 3
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 40
   fields:
@@ -116,7 +116,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 4
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 41
   fields:
@@ -130,7 +130,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 5
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 42
   fields:
@@ -144,7 +144,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 6
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 43
   fields:
@@ -158,7 +158,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 7
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 44
   fields:
@@ -172,7 +172,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 8
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 45
   fields:
@@ -186,7 +186,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 0
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 46
   fields:
@@ -200,7 +200,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 0
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 47
   fields:
@@ -214,7 +214,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 48
   fields:
@@ -228,11 +228,11 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 2
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 49
   fields:
-    name: 'Suns Out: Time to Unplug'
+    name: "Suns Out: Time to Unplug"
     slug: unplug
     body_template: unplug.html
     answer: TELEPORTS
@@ -242,7 +242,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 3
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 50
   fields:
@@ -256,7 +256,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 4
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 51
   fields:
@@ -270,7 +270,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 5
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 52
   fields:
@@ -284,7 +284,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 6
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 53
   fields:
@@ -298,7 +298,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 7
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 54
   fields:
@@ -312,7 +312,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 8
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 55
   fields:
@@ -326,7 +326,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: 0
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 56
   fields:
@@ -340,7 +340,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 57
   fields:
@@ -354,7 +354,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 58
   fields:
@@ -368,7 +368,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 59
   fields:
@@ -382,7 +382,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 60
   fields:
@@ -396,7 +396,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 61
   fields:
@@ -410,7 +410,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 62
   fields:
@@ -424,7 +424,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
+    emoji: ":question:"
 - model: puzzles.puzzle
   pk: 63
   fields:
@@ -438,68 +438,7 @@
     unlock_hours: -1
     unlock_global: -1
     unlock_local: -1
-    emoji: ':question:'
-- model: puzzles.team
-  pk: 1
-  fields:
-    user: 1
-    team_name: jchaffer
-    creation_time: 2025-03-23 13:57:02.865521+00:00
-    start_offset: 00:00:00
-    allow_time_unlocks: true
-    total_hints_awarded: 0
-    total_free_answers_awarded: 0
-    last_solve_time: null
-    is_prerelease_testsolver: true
-    is_hidden: true
-- model: puzzles.team
-  pk: 2
-  fields:
-    user: 2
-    team_name: test
-    creation_time: 2026-05-13 14:02:30.594652+00:00
-    start_offset: 00:00:00
-    allow_time_unlocks: true
-    total_hints_awarded: 0
-    total_free_answers_awarded: 0
-    last_solve_time: null
-    is_prerelease_testsolver: false
-    is_hidden: false
-- model: puzzles.puzzleunlock
-  pk: 1
-  fields:
-    team: 2
-    puzzle: 36
-    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
-    view_datetime: null
-- model: puzzles.puzzleunlock
-  pk: 2
-  fields:
-    team: 2
-    puzzle: 1
-    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
-    view_datetime: 2026-05-13 14:02:56.172229+00:00
-- model: puzzles.puzzleunlock
-  pk: 3
-  fields:
-    team: 2
-    puzzle: 45
-    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
-    view_datetime: null
-- model: puzzles.puzzleunlock
-  pk: 4
-  fields:
-    team: 2
-    puzzle: 46
-    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
-    view_datetime: null
-- model: puzzles.puzzleunlock
-  pk: 5
-  fields:
-    team: 2
-    puzzle: 55
-    unlock_datetime: 2026-05-13 14:02:51.087611+00:00
-    view_datetime: null
+    emoji: ":question:"
 - model: puzzles.puzzlemessage
   pk: 1
   fields:
@@ -553,7 +492,8 @@
   fields:
     puzzle: 56
     guess: JACKDEMPSEY
-    response: "Part 2: Weigh the Odds\r\n\r\nYou examine the regularly-available table
+    response:
+      "Part 2: Weigh the Odds\r\n\r\nYou examine the regularly-available table
       of data:\r\n227:21 (Baer);\r\n799:20;\r\n16:1;\r\n826:13;\r\n14:1;\r\n12:1;\r\n12:1;\r\na
       bit less than 209:1 (Tunney)\r\n\r\nCalculate, order, and reference the data
       to determine the prize"
@@ -585,7 +525,7 @@
   pk: 14
   fields:
     puzzle: 57
-    guess: '41183'
+    guess: "41183"
     response: Keep going!
 - model: puzzles.puzzlemessage
   pk: 15
