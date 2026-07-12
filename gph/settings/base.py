@@ -159,10 +159,10 @@ STATICFILES_STORAGE = 'gph.storage.CustomStorage'
 # Email SMTP information
 
 EMAIL_USE_TLS = False
-EMAIL_HOST = 'smtp.grandhuntdigital.com'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
-EMAIL_PORT = '2525'
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.grandhuntdigital.com')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'apikey')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '2525'))
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_SUBJECT_PREFIX = '[Grand Hunt] '
 
