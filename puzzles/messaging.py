@@ -71,6 +71,9 @@ def dispatch_discord_alert(webhook, content, username):
     if settings.IS_TEST:
         logger.info(_('(Test) Discord alert:\n') + content)
         return
+    if not webhook:
+        logger.info(_('(No webhook) Discord alert:\n') + content)
+        return
     logger.info(_('(Real) Discord alert:\n') + content)
     requests.post(webhook, data={'username': username, 'content': content})
 
