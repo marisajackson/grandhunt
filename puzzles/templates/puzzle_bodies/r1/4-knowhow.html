@@ -1,26 +1,21 @@
-{% extends "puzzle.html" %}
+{% extends "puzzle-r1.html" %}
 {% load static %}
 {% block html_class %}r1{% endblock %}
 
+{% block dialogue %}
+Kyle?  ... he got sent out to guard some temple last year and never returned.  Rumour has it he ran into some trouble with some boulders.  But shhh, its best not to ask too many questions round here.
+{% endblock %}
+
 {% block puzzle-body-html %}
 
-<div class="window">
-  {% comment %} <div class="name">Flavor Text</div> {% endcomment %}
-  <p class="flavortext">
-    You find a shelf with some books which have seemingly long titles. You
-    browse through the <b>indexes</b> and the <b>price tags</b>, only to find
-    out none of them can be borrowed or purchased. Why so? You consider thinking
-    out loud, but remember that you're in a library, so you may as well remain
-    <b>silent</b>.
-  </p>
-</div>
+<p>
+  You find a shelf with some books which have seemingly long titles. You
+  browse through the <b>indexes</b> and the <b>price tags</b>, only to find
+  out none of them can be borrowed or purchased. Why so? You consider thinking
+  out loud, but remember that you're in a library, so you may as well remain
+  <b>silent</b>.
+</p>
 
-<div class="window">
-    <img src="{% static 'grand_front/puzzle_resources/r1/knowhow.png' %}" />
-</div>
-
-<a href="/round/the-front">
-  <div class="endnote">The Front</div>
-</a>
+<img src="{% static 'grand_front/images/r1/puzzles/knowhow.png' %}" />
 
 {% endblock %}

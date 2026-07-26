@@ -1,21 +1,30 @@
-{% extends "puzzle.html" %}
+{% extends "puzzle-r1.html" %}
 {% load static %}
 {% block html_class %}r1{% endblock %}
 
+{% block dialogue %}
+Your inquiry about the manager is met with an intimidating stare... it’s clear Ulysses is in charge here.<br>
+Unsure what to do, you carefully look around the offices...
+{% endblock %}
+
 {% block puzzle-body-html %}
 
-<div class="window">
-    {% comment %} <div class="name">Flavor Text</div> {% endcomment %}
-    <p class="flavortext">These business strategists charge big bucks for their big ideas. They certainly repeat their rubrics regularly to yield rewarding results. Easy as A, B, C? Well, maybe. I've tried to reproduce them below but I'm not sure I've remembered them correctly.</p>
-</div>
+<style>
+    #r1-puzzle-container .word-bubble .word-bubble-img {
+    display: none;
+    }
 
-<div class="window">
-    <div class="name"></div>
-    <p></p>
-</div>
+    #r1-puzzle-container .word-bubble .word-bubble-text {
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    border-radius: 100px;
+    padding: 10px 20px;
+    }
+</style>
 
-<a href="/round/the-front">
-    <div class="endnote">The Front</div>
-</a>
+<p>These business strategists charge big bucks for their big ideas. They certainly repeat their rubrics regularly to yield rewarding results. Easy as A, B, C? Well, maybe. I've tried to reproduce them below but I'm not sure I've remembered them correctly.</p>
+
+<img src="{% static 'grand_front/images/r1/puzzles/endpoint.png' %}" />
 
 {% endblock %}

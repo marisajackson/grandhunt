@@ -1,0 +1,80 @@
+#r1-puzzle-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+#r1-puzzle-container .puzzle-header {
+  background-color: #d8feff;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 10px 30px;
+}
+
+#r1-puzzle-container .puzzle-header .header-left {
+  flex: 1;
+}
+
+#r1-puzzle-container .puzzle-header .sign-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#r1-puzzle-container .puzzle-header .sign {
+  max-width: 350px;
+  max-height: 100%;
+}
+
+#r1-puzzle-container .puzzle-header .character {
+  max-height: 200px;
+  width: auto;
+}
+
+#r1-puzzle-container .word-bubble {
+  /* should stack the word-bubble-img behind the word-bubble-text */
+  position: relative;
+}
+
+#r1-puzzle-container .word-bubble .word-bubble-img {
+  width: 100%;
+  height: auto;
+  top: -25px;
+  position: absolute;
+}
+
+#r1-puzzle-container .word-bubble .word-bubble-text {
+  color: black;
+  position: absolute;
+  top: 8px;
+  bottom: 10px;
+  margin: 0;
+  padding: 0px 35px;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.puzzle-main {
+  background-color: #f1ffeb;
+  max-width: 100%;
+}
+
+.puzzle-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.solved-title-marker {
+  font-size: 1.5em;
+  margin-top: 10px;
+  border: 2px solid #000;
+  padding: 5px;
+  background-color: #d8feff;
+}
+
+/* add a little triangle at the top right of the word bubble it should be relative to the word bubble */

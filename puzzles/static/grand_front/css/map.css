@@ -6,7 +6,7 @@
   height: 1200px;
   text-align: center;
   z-index: -10;
-  background: url("r1/map.png") no-repeat center center;
+  background: url("./../images/r1/map.png") no-repeat center center;
   background-size: contain;
 }
 

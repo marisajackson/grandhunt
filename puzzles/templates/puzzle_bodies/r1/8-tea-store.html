@@ -1,6 +1,11 @@
-{% extends "puzzle.html" %}
+{% extends "puzzle-r1.html" %}
 {% load static %}
 {% block html_class %}r1{% endblock %}
+
+{% block dialogue %}
+<br>
+Beeeeep beeep boop bap
+{% endblock %}
 
 {% block puzzle-body-html %}
 
@@ -10,17 +15,14 @@
     }
 </style>
 
-<div class="window">
-    {% comment %} <div class="name">Flavor Text</div> {% endcomment %}
-    <p class="flavortext">
-        Everything <a href="https://nutrimatic.org/2024/">this robot</a> spits out is almost, but not quite, entirely unlike tea!<br>
-        The good news is with these prepared recipes, you can expect the result you want in the top 5 results!<br>
-        Once you've figured out what it's trying to serve you, you can try filling in your own requests -<br>
-        We hear it's the only way you can get dessert!
-    </p>
-</div>
+<p>
+    Everything <a href="https://nutrimatic.org/2024/">this robot</a> spits out is almost, but not quite, entirely unlike tea!<br>
+    The good news is with these prepared recipes, you can expect the result you want in the top 5 results!<br>
+    Once you've figured out what it's trying to serve you, you can try filling in your own requests -<br>
+    We hear it's the only way you can get dessert!
+</p>
 
-<div class="window">
+<div>
     <h5> -- You've Seen These Before -- </h5>
     <a href="https://nutrimatic.org/2024/?q=%28nVCA%29%7B2%2C%7D&go=Go" target="_blank">(nVCA){2,}</a><br>
     <a href="https://nutrimatic.org/2024/?q=%28%5Bif%5D%3Fo%5Brn%5D%29%7B3%7D&go=Go" target="_blank">([if]?o[rn]){3}</a><br>
@@ -57,9 +59,4 @@
     <h5> -- And For Dessert -- </h5>
     <p>_AA_ AA__</p>
 </div>
-
-<a href="/round/the-front">
-    <div class="endnote">The Front</div>
-</a>
-
 {% endblock %}

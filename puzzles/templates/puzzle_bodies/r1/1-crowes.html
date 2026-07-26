@@ -1,27 +1,22 @@
-{% extends "puzzle.html" %}
+{% extends "puzzle-r1.html" %}
 {% load static %}
 {% block html_class %}r1{% endblock %}
 
+{% block dialogue %}
+Ah, welcome.  Look... things can be a bit tough round here, but if you’re ever stuck, go and see The Fixer, they can help out  for a small favour.  You find them.....
+{% endblock %}
+
 {% block puzzle-body-html %}
-
-<div class="window">
-    {% comment %} <div class="name">Flavor Text</div> {% endcomment %}
-    <p class="flavortext">You've never been allowed inside Crowe's tavern
+<div style="max-width: 600px; margin: auto;">
+    <p>You've never been allowed inside Crowe's tavern
         before.</p>
-    <p class="flavortext">You find yourself drawn into watching an ongoing game
+    <p>You find yourself drawn into watching an ongoing game
         of pool. </p>
-</div>
-
-<div class="window">
     <p>First the purple striped ball is pocketed. Then yellow solid followed by
         red solid. Striped red, striped yellow, striped green. Solid Maroon...
     </p>
     <p>The game could go on all day, but you'd better get moving. It's your
         first day and you don't want to be found _______</p>
 </div>
-
-<a href="/round/the-front">
-    <div class="endnote">The Front</div>
-</a>
 
 {% endblock %}
